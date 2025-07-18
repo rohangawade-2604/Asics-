@@ -1,10 +1,13 @@
+
 .phone{
-    color: #000;
+    color: white;
     margin-right: 15px;
+    text-decoration: none;
 }
 
 .email{
-    color: #000;
+    color: white;
+    text-decoration: none;
 }
 
 .social-icons{
@@ -23,8 +26,8 @@
 
 .footer{
     border: 2px solid black;
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: darkblue;
+    color: white;
 }
 
 .footer-container{
