@@ -49,9 +49,11 @@ export const Footer = () => {
                         <input type="text" name='email' placeholder='you@email.com' />
 
                         <div>
-                            <h4>Let's Talk</h4>
-                            <i class="fa-solid fa-phone"></i>
+                            <h4 className='mt-10'>Let's Talk</h4>
+                            <i class="fa-solid fa-phone "></i>
                             <a href="">0124-6289100</a>
+
+                            <i class="fa-solid fa-envelope"></i>
                              <a href=''> customer-service-india@asics.com</a>
                         </div>
                     </ul>
