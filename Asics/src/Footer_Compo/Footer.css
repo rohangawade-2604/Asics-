@@ -1,0 +1,40 @@
+.phone{
+    color: #000;
+    margin-right: 15px;
+}
+
+.email{
+    color: #000;
+}
+
+.social-icons{
+    display: flex;
+    gap: 10px;
+    font-size: larger;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.footer{
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-container{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+}
+
+.footer-logo{
+    list-style: none;
+    row-gap: 10px;
+}
