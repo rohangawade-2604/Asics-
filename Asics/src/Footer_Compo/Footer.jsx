@@ -6,9 +6,9 @@ export const Footer = () => {
     <>
 
       <div>
-        <div className="footer border-2 bg-blue-900 text-white w-[100%] h-[60vh]">
+        <div className="footer border-2 bg-blue-950 text-white w-[100%] h-[68vh]">
 
-          <div className="footer_logo flex justify-around border-2">
+          <div className="footer_logo flex justify-around  mt-18">
 
             <div className="footer_link flex flex-col gap-3">
               <h1 className='font-semibold'>Corporate Info</h1>
@@ -46,13 +46,13 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="footer_link flex flex-col gap-3">
+            <div className="footer_link flex flex-col gap-3 relative">
               <h1 className='font-semibold'>Sign Up to our Newsletter</h1>
               <ul className='flex flex-col gap-3'>
                 <li>Be the first to hear about new products, exclusive events and online offers.</li>
                 <li>Sign up and Get 10% off on your first Order. T&C applied.</li>
-                <input type="text" name='email' placeholder='you@email.com' />
-                <button>Sign Up</button>
+                <input type="text" name='email' placeholder='you@email.com' className='border-2 w-100 p-1 pl-5 rounded-[20px]'/>
+                <button type='button' className='border-2 w-40 absolute top-26 left-70 p-2 rounded-[20px] bg-white text-blue-900'>Join US</button>
                 <h1>Lets Talk</h1>
 
                 <div className="contact  flex justify-baseline items-center gap-3 ">
@@ -66,9 +66,9 @@ export const Footer = () => {
                 <h1>Connect with Us</h1>
 
                 <div className="social_media flex justify-baseline gap-5">
-                  <i className="fa-brands fa-facebook"></i>
-                  <i className="fa-brands fa-twitter"></i>
-                  <i className="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-facebook text-[25px]"></i>
+                  <i className="fa-brands fa-twitter text-[25px]"></i>
+                  <i className="fa-brands fa-instagram text-[25px]"></i>
                 </div>
               </ul>
             </div>
@@ -76,7 +76,7 @@ export const Footer = () => {
 
           </div>
 
-          <div className="footer_bottom flex justify-around items-center mt-5 ">
+          <div className="footer_bottom flex justify-between items-center mt-15 mx-13 text-[14px]">
             <h1>© 2025 ASICS India Pvt. Ltd. All Rights Reserved.</h1>
             <h1>The stripe design featured on the sides of the ASICS® shoes is a registered trademark of ASICS Corporation.</h1>
           </div>
