@@ -6,13 +6,13 @@ export const Footer = () => {
     <>
 
       <div>
-        <div className="footer">
+        <div className="footer border-2 bg-blue-900 text-white w-[100%] h-[60vh]">
 
-          <div className="footer_logo flex justify-around">
+          <div className="footer_logo flex justify-around border-2">
 
-            <div className="footer_link">
+            <div className="footer_link flex flex-col gap-3">
               <h1 className='font-semibold'>Corporate Info</h1>
-              <ul>
+              <ul className='flex flex-col gap-3'>
                 <li>About ASICS </li>
                 <li>Terms and Conditions</li>
                 <li>Disclaimers</li>
@@ -23,9 +23,9 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="footer_link">
+            <div className="footer_link flex flex-col gap-3">
               <h1 className='font-semibold'>Customer Services</h1>
-              <ul>
+              <ul className='flex flex-col gap-3'>
                 <li>Contact US</li>
                 <li>Return Policy</li>
                 <li>Shipping Informations</li>
@@ -35,9 +35,9 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="footer_link">
+            <div className="footer_link flex flex-col gap-3">
               <h1 className='font-semibold'>Sizing Guides & Resources</h1>
-              <ul>
+              <ul className='flex flex-col gap-3'>
                 <li>Shoe size Guide</li>
                 <li>Shoe width Guide</li>
                 <li>Pronation Guides</li>
@@ -46,16 +46,16 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="footer_link ">
+            <div className="footer_link flex flex-col gap-3">
               <h1 className='font-semibold'>Sign Up to our Newsletter</h1>
-              <ul>
+              <ul className='flex flex-col gap-3'>
                 <li>Be the first to hear about new products, exclusive events and online offers.</li>
                 <li>Sign up and Get 10% off on your first Order. T&C applied.</li>
                 <input type="text" name='email' placeholder='you@email.com' />
                 <button>Sign Up</button>
                 <h1>Lets Talk</h1>
 
-                <div className="contact ml-10 flex justify-baseline gap-3 ">
+                <div className="contact  flex justify-baseline items-center gap-3 ">
                   <i className="fa-solid fa-phone"></i>
                   <p className='text-[16px]'>0124-6289100</p>
 
@@ -67,17 +67,20 @@ export const Footer = () => {
 
                 <div className="social_media flex justify-baseline gap-5">
                   <i className="fa-brands fa-facebook"></i>
-                  <i className="fa-brands fa-instagram"></i>
                   <i className="fa-brands fa-twitter"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </div>
-
-
-
               </ul>
             </div>
 
 
           </div>
+
+          <div className="footer_bottom flex justify-around items-center mt-5 ">
+            <h1>© 2025 ASICS India Pvt. Ltd. All Rights Reserved.</h1>
+            <h1>The stripe design featured on the sides of the ASICS® shoes is a registered trademark of ASICS Corporation.</h1>
+          </div>
+
         </div>
       </div>
 
