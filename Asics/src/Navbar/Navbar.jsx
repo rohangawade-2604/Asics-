@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom'
 export const Navbar = () => {
   return (
     <>
-      <header>
+      <header className='flex justify-around items-center my-3  mx-13 '>
 
         <div className="logo">
             <img src={Asics} alt="" />
         </div>
 
-        <ul>
-            <li>
+        <ul className='flex justify-around gap-4 items-center'>
+            <li >
                 <Link to='/men'>Men</Link>
             </li>
 
@@ -49,9 +49,17 @@ export const Navbar = () => {
             </li>
         </ul>
 
-        <div className="search">
-            <input type="text" placeholder='Search ASICS' />
-            
+        <div className="search ml-20">
+
+            <input type="text" placeholder='Search ASICS' className='border-1 h-10 w-65 rounded-[20px] pl-5 cursor-pointer ' />   
+        </div>
+
+        <div className="heart cursor-pointer ">
+            <i className="fa-regular fa-heart text-[25px]"></i>
+        </div>
+
+        <div className="cart cursor-pointer">
+            <i className="fa-solid fa-cart-shopping text-[25px]"></i>
         </div>
 
       </header>
