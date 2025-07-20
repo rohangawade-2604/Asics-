@@ -7,6 +7,7 @@ import { Men } from './Home/Men'
 import { Women } from './Home/Women'
 import { Kids } from './Home/Kids'
 import { SportStyle } from './Home/SportStyle'
+import {Home} from './Home/Home'
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
     <Navbar/>
 
     <Routes>
+      <Route path="/" element={<Home/>}/>
       <Route path="/men" element={<Men/>}/>
       <Route path="/women" element={<Women/>}/>
       <Route path="/kids" element={<Kids/>}/>

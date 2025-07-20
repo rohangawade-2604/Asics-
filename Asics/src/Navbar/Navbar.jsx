@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom'
 export const Navbar = () => {
   return (
     <>
-      <header className='flex justify-around items-center my-3  mx-13 '>
-
+      <header className='sticky top-0 z-20 bg-white my-3 py-3 ' >
+        <nav className='flex justify-around items-center mx-15 '>
         <div className="logo">
-            <img src={Asics} alt="" />
+            <Link to='/'><img src={Asics} /></Link>
+            
         </div>
 
-        <ul className='flex justify-around gap-4 items-center'>
+        <ul className='flex justify-around gap-5 items-center cursor-pointer'>
+
             <li >
                 <Link to='/men'>Men</Link>
             </li>
@@ -61,7 +63,7 @@ export const Navbar = () => {
         <div className="cart cursor-pointer">
             <i className="fa-solid fa-cart-shopping text-[25px]"></i>
         </div>
-
+    </nav>
       </header>
     </>
   )
