@@ -49,6 +49,11 @@ export const Navbar = () => {
             </li>
         </ul>
 
+        <div className="search">
+            <input type="text" placeholder='Search ASICS' />
+            
+        </div>
+
       </header>
     </>
   )
