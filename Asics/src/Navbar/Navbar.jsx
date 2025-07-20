@@ -1,5 +1,5 @@
 import React from 'react'
-import Asics from './assets/Asics.png'
+import Asics from '../assets/Asics.png'
 import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
@@ -13,7 +13,7 @@ export const Navbar = () => {
 
         <ul>
             <li>
-                <Link to='/'>Men</Link>
+                <Link to='/men'>Men</Link>
             </li>
 
             <li>
