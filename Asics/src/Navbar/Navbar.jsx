@@ -17,15 +17,15 @@ export const Navbar = () => {
             </li>
 
             <li>
-                <Link to='/'>Women</Link>
+                <Link to='/women'>Women</Link>
             </li>
 
             <li>
-                <Link to='/'>Kids</Link>
+                <Link to='/kids'>Kids</Link>
             </li>
 
             <li>
-                <Link to='/'>SportStyle</Link>
+                <Link to='/sportstyle'>SportStyle</Link>
             </li>
 
             <li>
