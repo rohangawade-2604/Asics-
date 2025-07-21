@@ -1,19 +1,19 @@
-.slider1{
+.slider{
     overflow: hidden;
 }
 
-.slider1 .figure1 {
+.slider .figure {
     display: flex;
     position: relative;
     animation: 15s slider infinite;
 }     
 
-.slider1 .figure1 img{
+.slider .figure img{
     float : left;
   
 }
 
-@keyframes slider1 {
+@keyframes slider {
     0% {
         left: 0;
     }

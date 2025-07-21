@@ -1,6 +1,7 @@
 import React from 'react'
 import { Shoes_Slider } from './Shoes_Slider'
 import { Explore } from './Explore'
+import { SportCollecton } from './SportCollecton'
 
 export const Home = () => {
     return (
@@ -31,6 +32,10 @@ export const Home = () => {
 
                 <div className="explore">
                     <Explore/>
+                </div>
+
+                <div className="sport_collection">
+                    <SportCollecton/>
                 </div>
 
             </div>
