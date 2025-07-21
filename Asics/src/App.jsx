@@ -7,7 +7,7 @@ import { Men } from './Home/Men'
 import { Women } from './Home/Women'
 import { Kids } from './Home/Kids'
 import { SportStyle } from './Home/SportStyle'
-import {Home} from './Home/Home'
+import { Home } from './Asics_Home/Home'
 
 function App() {
   
