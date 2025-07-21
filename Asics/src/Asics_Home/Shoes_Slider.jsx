@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Shoes_Slider = () => {
+export const Shoes_Slider = () => {
   return (
     <>
       
@@ -8,4 +8,3 @@ const Shoes_Slider = () => {
   )
 }
 
-export default Shoes_Slider

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Shoes_Slider} from './Shoes_Slider'
 
 export const Home = () => {
     return (
@@ -18,7 +19,7 @@ export const Home = () => {
                 allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
             />
 
-            
+            <Shoes_Slider/>
         </div>
             
         </>
