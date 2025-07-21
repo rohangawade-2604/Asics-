@@ -7,7 +7,7 @@ import './Sport_collection.css'
 export const SportCollecton = () => {
   return (
     <>
-       <h1 className='text-[36px] text-center'>Limited Series Collection</h1>
+       <h1 className='text-[36px] text-center text-[#312955] my-5 mt-7'>SPORTSTYLE Collection</h1>
             <div className="slider">
               <figure className='figure'>
                 <img src={SportColl} alt="" />
