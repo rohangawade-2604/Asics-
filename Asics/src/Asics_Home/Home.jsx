@@ -1,5 +1,6 @@
 import React from 'react'
 import { Shoes_Slider } from './Shoes_Slider'
+import { Explore } from './Explore'
 
 export const Home = () => {
     return (
@@ -22,10 +23,14 @@ export const Home = () => {
                 />
                 </div>
                
-               
+
 
                 <div className='shoes_slider'>
                     <Shoes_Slider />
+                </div>
+
+                <div className="explore">
+                    <Explore/>
                 </div>
 
             </div>
