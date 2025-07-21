@@ -22,6 +22,7 @@ export const Home = () => {
                 />
                 </div>
                
+               
 
                 <div className='shoes_slider'>
                     <Shoes_Slider />
