@@ -80,7 +80,7 @@ export const Home = () => {
 
                 <div className="About_Asics  ">
 
-                    <div className="container flex justify-around items-center gap-10 my-20">
+                    <div className="container flex justify-around items-center mx-20 gap-10 my-20">
                         <div className="video">
                             <video width="650" height="700" controls autoPlay loop muted poster="thumbnail.jpg">
                                 <source src={Aboutasics} type="video/mp4"></source>
