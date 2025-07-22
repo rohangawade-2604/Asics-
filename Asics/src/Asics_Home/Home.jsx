@@ -65,19 +65,23 @@ export const Home = () => {
 
                 {/* ------------- About Asics Section ------------------ */}
 
-                <div className="About_Asics flex justify-around  border-10">
+                <div className="About_Asics mx-10 my-20 ">
 
-                    <div className="video w-[80%] h-[80vh]">
-                        <video width="650" height="700" controls autoPlay loop muted poster="thumbnail.jpg">
-                            <source src={Aboutasics} type="video/mp4"></source>
-                        </video>
+                    <div className="container flex justify-around gap-10  mx-15">
+                        <div className="video w-[80%]">
+                            <video width="650" height="700" controls autoPlay loop muted poster="thumbnail.jpg">
+                                <source src={Aboutasics} type="video/mp4"></source>
+                            </video>
+                        </div>
+
+                        <div className="description w-[100%]  flex flex-col  gap-5">
+                            <h1 className='text-[36px] text-[#312955]'>About ASICS</h1>
+                            <p className='w-[90%] text-[#312955]'>ASICS has been developing sports footwear and apparel for more than 50 years. In this time, innovation has been the key to our introduction of design philosophies that have revolutionised the world of sports. At our research and development centre in Kobe, Japan, we work in close collaboration with male and female athletes. Through our scientific approach we have strived to create highly innovative sports product solutions that our customers rely upon. Technologies, such as core GEL cushioning system and Flytefoam are renown for enabling the most comfortable and performance-enhancing footwear and apparel on the market, for athletes and active consumers alike.</p>
+                            <button type='button' className='text-[#312955] border-2 p-2 font-semibold text-[12px] w-30 rounded-[20px] cursor-pointer'>Read More</button>
+                        </div>
                     </div>
 
-                    <div className="description w-[100%]">
-                        <h1>About ASICS</h1>
-                        <p className='w-[50%]'>ASICS has been developing sports footwear and apparel for more than 50 years. In this time, innovation has been the key to our introduction of design philosophies that have revolutionised the world of sports. At our research and development centre in Kobe, Japan, we work in close collaboration with male and female athletes. Through our scientific approach we have strived to create highly innovative sports product solutions that our customers rely upon. Technologies, such as core GEL cushioning system and Flytefoam are renown for enabling the most comfortable and performance-enhancing footwear and apparel on the market, for athletes and active consumers alike.</p>
-                        <button>Read More</button>
-                    </div>
+
 
 
 
