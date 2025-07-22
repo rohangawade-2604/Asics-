@@ -15,7 +15,9 @@ export const SportCollecton = () => {
                 <img src={SportColl2} alt="" />
                 <img src={SportColl} alt="" />
               
-               
+               <div>
+                
+               </div>
               
               </figure>
             </div>
