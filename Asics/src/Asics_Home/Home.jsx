@@ -74,7 +74,7 @@ export const Home = () => {
                             </video>
                         </div>
 
-                        <div className="description w-[100%]  flex flex-col just gap-5">
+                        <div className="description w-[100%]  flex flex-col  gap-5">
                             <h1 className='text-[36px] text-[#312955]'>About ASICS</h1>
                             <p className='w-[90%] text-[#312955]'>ASICS has been developing sports footwear and apparel for more than 50 years. In this time, innovation has been the key to our introduction of design philosophies that have revolutionised the world of sports. At our research and development centre in Kobe, Japan, we work in close collaboration with male and female athletes. Through our scientific approach we have strived to create highly innovative sports product solutions that our customers rely upon. Technologies, such as core GEL cushioning system and Flytefoam are renown for enabling the most comfortable and performance-enhancing footwear and apparel on the market, for athletes and active consumers alike.</p>
                             <button type='button' className='text-[#312955] border-2 p-2 font-semibold text-[12px] w-30 rounded-[20px] cursor-pointer'>Read More</button>
