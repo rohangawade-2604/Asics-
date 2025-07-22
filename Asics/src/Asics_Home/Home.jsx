@@ -65,7 +65,7 @@ export const Home = () => {
 
                 {/* ------------- About Asics Section ------------------ */}
 
-                <div className="About_Asics mx-10 my-20 ">
+                <div className="About_Asics mx-10 my-20 overflow-hidden">
 
                     <div className="container flex justify-around gap-10  mx-15">
                         <div className="video w-[80%]">
