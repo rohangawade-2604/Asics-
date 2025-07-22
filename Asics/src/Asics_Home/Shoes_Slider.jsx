@@ -8,7 +8,7 @@ import HomePic4 from '../assets/Homepic4.png'
 export const Shoes_Slider = () => {
   return (
     <>
-    <h1 className='text-[36px] text-center'>Limited Series Collection</h1>
+    <h1 className='text-[36px] text-center text-[#312955] '>Limited Series Collection</h1>
       <div className="slider1">
         <figure className='figure1'>
             <img src={Homepic} alt="" />
