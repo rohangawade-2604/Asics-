@@ -6,28 +6,29 @@ import { ShopColor } from './ShopColor'
 import Gelkayano from '../assets/GelKayano.png'
 import Dynablast from '../assets/Dynablast.png'
 import Apparel from '../assets/Apparel.png'
+import Aboutasics from '../assets/Aboutasics.mp4'
 
 export const Home = () => {
     return (
         <>
             <div className="home_container">
-                
-                <div className="iframe">
-                     <iframe
-                    loading="lazy"
-                    title="Gumlet video player"
-                    src="https://play.gumlet.io/embed/687648c0e448cc1c325d4daa?background=true&autoplay=true&loop=true&disableControls=false"
-                    style={{
-                        border: 'none',
-                        height: '100vh',
-                        width: '100%',
-                        overflow: 'hidden',
 
-                    }}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
-                />
+                <div className="iframe">
+                    <iframe
+                        loading="lazy"
+                        title="Gumlet video player"
+                        src="https://play.gumlet.io/embed/687648c0e448cc1c325d4daa?background=true&autoplay=true&loop=true&disableControls=false"
+                        style={{
+                            border: 'none',
+                            height: '100vh',
+                            width: '100%',
+                            overflow: 'hidden',
+
+                        }}
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
+                    />
                 </div>
-               
+
 
 
                 <div className='shoes_slider'>
@@ -35,30 +36,51 @@ export const Home = () => {
                 </div>
 
                 <div className="explore">
-                    <Explore/>
+                    <Explore />
                 </div>
 
                 <div className="sport_collection">
-                    <SportCollecton/>
+                    <SportCollecton />
                 </div>
 
                 <div className="shopColor">
-                    <ShopColor/>
+                    <ShopColor />
                 </div>
 
                 <div className="gelkayano">
                     <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ Series</h1>
-                    <img src={Gelkayano} alt=""  className='cursor-pointer'/>
+                    <img src={Gelkayano} alt="" className='cursor-pointer' />
                 </div>
 
-                 <div className="Dynablast">
+                <div className="Dynablast">
                     <h1 className='text-[36px] text-center text-[#312955]'>DYNABLAST™ 5 Collection</h1>
-                    <img src={Dynablast} alt=""  className='cursor-pointer'/>
+                    <img src={Dynablast} alt="" className='cursor-pointer' />
                 </div>
 
                 <div className="Apparel">
                     <h1 className='text-[36px] text-center text-[#312955]'>Apparel Collection</h1>
-                    <img src={Apparel} alt=""  className='cursor-pointer'/>
+                    <img src={Apparel} alt="" className='cursor-pointer' />
+                </div>
+
+
+                {/* ------------- About Asics Section ------------------ */}
+
+                <div className="About_Asics flex justify-around  border-10">
+
+                    <div className="video w-[80%] h-[80vh]">
+                        <video width="650" height="700" controls autoPlay loop muted poster="thumbnail.jpg">
+                            <source src={Aboutasics} type="video/mp4"></source>
+                        </video>
+                    </div>
+
+                    <div className="description w-[100%]">
+                        <h1>About ASICS</h1>
+                        <p className='w-[50%]'>ASICS has been developing sports footwear and apparel for more than 50 years. In this time, innovation has been the key to our introduction of design philosophies that have revolutionised the world of sports. At our research and development centre in Kobe, Japan, we work in close collaboration with male and female athletes. Through our scientific approach we have strived to create highly innovative sports product solutions that our customers rely upon. Technologies, such as core GEL cushioning system and Flytefoam are renown for enabling the most comfortable and performance-enhancing footwear and apparel on the market, for athletes and active consumers alike.</p>
+                        <button>Read More</button>
+                    </div>
+
+
+
                 </div>
 
             </div>
