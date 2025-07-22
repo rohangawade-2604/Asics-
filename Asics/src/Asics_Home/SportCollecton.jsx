@@ -14,6 +14,7 @@ export const SportCollecton = () => {
                 <img src={SportColl1} alt="" />
                 <img src={SportColl2} alt="" />
                 <img src={SportColl} alt="" />
+                <img src={SportColl2} alt="" />
               
                <div>
                 
