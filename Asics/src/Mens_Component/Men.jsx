@@ -6,6 +6,7 @@ import Running from '../assets/Running.png'
 import Tennis from '../assets/Tennis.png'
 import Indoors from '../assets/Indoor.png'
 import Cricket from '../assets/Cricket.png'
+import Homepic2 from '../assets/Homepic.png'
 export const Men = () => {
   return (
     <>
@@ -81,7 +82,14 @@ export const Men = () => {
             </div>
           </div>
 
-          LUXE PACK Sections
+          {/*--------------- LUXE PACK Sections------------------- */}
+
+          <div className="Luxe_Pack">
+
+            <h1 className='text-[36px] text-center text-[#312955] my-5'>Luxe Pack</h1>
+
+            <img src={Homepic2} alt="" />
+            </div>
 
 
         </div>
