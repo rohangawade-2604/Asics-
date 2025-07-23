@@ -12,7 +12,7 @@ export const Descript = () => {
 
         <div className="descript flex justify-around mx-15 my-8">
 
-              <div className="shipping flex justify-evently item-center gap-5 dis">
+              <div className="shipping flex justify-evently item-center gap-5 ">
                   <div>
                     <img src={Truck} alt="" className=' h-10' />
                   </div>
