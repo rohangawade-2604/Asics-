@@ -2,6 +2,10 @@ import React from 'react'
 import men from '../assets/Mens1.png'
 import men1 from '../assets/Mens2.png'
 import './Men.css'
+import Running from '../assets/Running.png'
+import Tennis from '../assets/Tennis.png'
+import Indoors from '../assets/Indoor.png'
+import Cricket from '../assets/Cricket.png'
 export const Men = () => {
   return (
     <>
@@ -51,8 +55,33 @@ export const Men = () => {
 
           <div className="Sports">
 
-            <h1 className='text-[36px] text-center text-[#312955] '>Shop by Sports</h1> 
+            <h1 className='text-[36px] text-center text-[#312955] my-5'>Shop by Sports</h1> 
+
+            <div className="cards_Sections flex flex-row justify-around mx-20 my-7 mb-10 gap-10 ">
+
+                  <div className="cards ">
+                    <img src={Running} alt="" className='h-60 '/>
+                    <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Running</button>
+                  </div>
+
+                  <div className="cards1">
+                    <img src={Tennis} alt="" className='h-60'/>
+                    <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Tennis</button>
+                  </div>
+
+                  <div className="cards2"> 
+                    <img src={Indoors} alt="" className='h-60'/>
+                    <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Indoors</button>
+                  </div>
+
+                  <div className="cards3">
+                    <img src={Cricket} alt="" className='h-60'/>
+                    <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Cricket</button>
+                  </div>
+            </div>
           </div>
+
+          LUXE PACK Sections
 
 
         </div>
