@@ -94,10 +94,12 @@ export const Home = () => {
                         </div>
                     </div>
                     
-                    
+
                     {/*----------------- Description Sections------------- */}
 
-
+                    <div className="descript">
+                        <Descript />    
+                    </div>
 
 
 
