@@ -7,6 +7,7 @@ import Gelkayano from '../assets/GelKayano.png'
 import Dynablast from '../assets/Dynablast.png'
 import Apparel from '../assets/Apparel.png'
 import Aboutasics from '../assets/Aboutasics.mp4'
+import { Descript } from './Descript'
 
 export const Home = () => {
     return (
