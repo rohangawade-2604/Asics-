@@ -8,6 +8,7 @@ import { Women } from './Home/Women'
 import { Kids } from './Home/Kids'
 import { SportStyle } from './Home/SportStyle'
 import { Home } from './Asics_Home/Home'
+import { Descript } from './Asics_Home/Descript'
 
 function App() {
   
@@ -24,6 +25,8 @@ function App() {
       <Route path="/sportstyle" element={<SportStyle/>}/>
     </Routes>
 
+
+    <Descript/>
     <Footer/>
     </>
   )

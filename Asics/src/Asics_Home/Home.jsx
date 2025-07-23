@@ -96,12 +96,6 @@ export const Home = () => {
                     </div>
                     
 
-                    {/*----------------- Description Sections------------- */}
-
-                    <div className="descript">
-                        <Descript />    
-                    </div>
-
 
 
                 </div>
