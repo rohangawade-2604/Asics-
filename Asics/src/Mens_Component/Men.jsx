@@ -132,7 +132,7 @@ export const Men = () => {
             <img src={Asclothing} alt="" className='cursor-pointer' />
           </div>
 
-
+hd
 
         </div>
       </div>
