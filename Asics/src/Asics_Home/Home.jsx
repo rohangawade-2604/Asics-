@@ -93,6 +93,9 @@ export const Home = () => {
                             <button type='button' className='text-[#312955] border-2 p-2 font-semibold text-[12px] w-30 rounded-[20px] cursor-pointer'>Read More</button>
                         </div>
                     </div>
+                    
+                    
+                    {/*----------------- Description Sections------------- */}
 
 
 
