@@ -8,6 +8,10 @@ import Indoors from '../assets/Indoor.png'
 import Cricket from '../assets/Cricket.png'
 import Homepic2 from '../assets/Homepic2.png'
 import MensGel from '../assets/MensGel.png'
+import Blast from '../assets/Blast.png'
+import RunCollec from '../assets/RunCollec.png'
+import Mensports from '../assets/Mensport.png'
+import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
   return (
     <>
@@ -97,6 +101,35 @@ export const Men = () => {
           <div className="gelkayano">
             <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ 32</h1>
             <img src={MensGel} alt="" className='cursor-pointer' />
+          </div>
+
+
+            {/* ------------- Blast Section ------------------ */}
+
+          <div className="Blast my-5">
+            <h1 className='text-[36px] text-center text-[#312955]'>BLAST Series</h1>
+            <img src={Blast} alt="" className='cursor-pointer' />
+          </div>
+
+           {/* ------------- Running Collections Section ------------------ */}
+
+          <div className="Running_Collections my-5">
+            <h1 className='text-[36px] text-center text-[#312955]'>Running Collections</h1>
+            <img src={RunCollec} alt="" className='cursor-pointer' />
+          </div>
+
+            {/* ------------- SPORTSTYLE COLLECTION Section ------------------ */}
+
+          <div className="Running_Collections my-5">
+            <h1 className='text-[36px] text-center text-[#312955]'>SPORTSTYLE COLLECTION</h1>
+            <img src={Mensports} alt="" className='cursor-pointer' />
+          </div>
+
+           {/* ------------- ASICS Clothing Section ------------------ */}
+
+          <div className="Running_Collections my-5">
+            <h1 className='text-[36px] text-center text-[#312955]'>ASICS Clothing</h1>
+            <img src={Asclothing} alt="" className='cursor-pointer' />
           </div>
 
 
