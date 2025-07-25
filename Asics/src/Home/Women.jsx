@@ -7,6 +7,7 @@ import Womengel from '../assets/womengel.png'
 import Liteshow from '../assets/Liteshow.png'
 import Blastw from '../assets/Blastw.png'
 import sportstylew from '../assets/sportstylew.png'
+import Apparelw from '../assets/Apparelw.png'
 
 export const Women = () => {
   return (
@@ -55,17 +56,17 @@ export const Women = () => {
 
               <div className="cards overflow-hidden ">
                 <img src={Runningw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Running</button>
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Running</button>
               </div>
 
               <div className="cards1 overflow-hidden">
                 <img src={Indoorsw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Tennis</button>
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Tennis</button>
               </div>
 
               <div className="cards2 overflow-hidden">
                 <img src={Tennisw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Indoors</button>
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Indoors</button>
               </div>
 
             </div>
@@ -99,6 +100,13 @@ export const Women = () => {
             <div className="gelkayano">
               <h1 className='text-[36px] text-center text-[#312955]'>LITE-SHOW™ Collection</h1>
               <img src={sportstylew} alt="" className='cursor-pointer' />
+            </div>
+
+            {/* ------------- Apparel collection Women ection ------------------ */}
+
+            <div className="gelkayano">
+              <h1 className='text-[36px] text-center text-[#312955]'>Apparel Collection</h1>
+              <img src={Apparelw} alt="" className='cursor-pointer' />
             </div>
 
         </div>
