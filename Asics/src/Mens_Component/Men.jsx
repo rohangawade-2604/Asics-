@@ -66,23 +66,23 @@ export const Men = () => {
             <div className="cards_Sections flex flex-row justify-around mx-20 my-7 mb-10 gap-10 ">
 
               <div className="cards overflow-hidden">
-                <img src={Running} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Running</button>
+                <img src={Running} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Running</button>
               </div>
 
               <div className="cards1 overflow-hidden">
-                <img src={Tennis} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Tennis</button>
+                <img src={Tennis} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Tennis</button>
               </div>
 
               <div className="cards2 overflow-hidden">
-                <img src={Indoors} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Indoors</button>
+                <img src={Indoors} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Indoors</button>
               </div>
 
               <div className="cards3 overflow-hidden">
-                <img src={Cricket} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1]' />
-                <button className='border-2 w-45 h-10 rounded-[25px] my-3 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Cricket</button>
+                <img src={Cricket} alt="" className='h-60 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
+                <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-15 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Cricket</button>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export const Men = () => {
 
             <h1 className='text-[36px] text-center text-[#312955] my-5'>Luxe Pack</h1>
 
-            <img src={Homepic2} alt="" />
+            <img src={Homepic2} alt="" className='cursor-pointer' />
           </div>
 
           {/* ------------- GEL-KAYANO Section ------------------ */}
