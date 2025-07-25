@@ -19,7 +19,7 @@ export const Women = () => {
 
           <div className="img">
             <figure>
-              <img src={Apparelw} alt="" />
+              <img src={Apparelw} alt="" className='cursor-pointer' />
             </figure>
           </div>
 
