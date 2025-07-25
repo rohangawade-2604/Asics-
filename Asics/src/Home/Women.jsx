@@ -5,6 +5,8 @@ import Indoorsw from '../assets/indoorw.png'
 import Runningw from '../assets/runningw.png'
 import Womengel from '../assets/womengel.png'
 import Liteshow from '../assets/Liteshow.png'
+import Blastw from '../assets/Blastw.png'
+import sportstylew from '../assets/sportstylew.png'
 
 export const Women = () => {
   return (
@@ -80,8 +82,23 @@ export const Women = () => {
             {/* ------------- LiteShow ection ------------------ */}
 
             <div className="gelkayano">
-              <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ 32</h1>
+              <h1 className='text-[36px] text-center text-[#312955]'>LITE-SHOW™ Collection</h1>
               <img src={Liteshow} alt="" className='cursor-pointer' />
+            </div>
+
+            
+            {/* ------------- Blast Women ection ------------------ */}
+
+            <div className="gelkayano">
+              <h1 className='text-[36px] text-center text-[#312955]'>LITE-SHOW™ Collection</h1>
+              <img src={Blastw} alt="" className='cursor-pointer' />
+            </div>
+
+             {/* ------------- SportStyle Women ection ------------------ */}
+
+            <div className="gelkayano">
+              <h1 className='text-[36px] text-center text-[#312955]'>LITE-SHOW™ Collection</h1>
+              <img src={sportstylew} alt="" className='cursor-pointer' />
             </div>
 
         </div>
