@@ -20,7 +20,7 @@ export const Women = () => {
 
           <div className="img">
             <figure>
-              <img src={men} alt="" />
+              <img src={Apparelw} alt="" />
             </figure>
           </div>
 
@@ -28,7 +28,7 @@ export const Women = () => {
 
           <div className="Mens_Collections">
 
-            <h1 className='text-[36px] text-center text-[#312955] '>Womens Collections</h1>
+            <h1 className='text-[36px] my-5 text-center text-[#312955] '>Womens Collections</h1>
 
             <div className="buttons flex flex-row justify-around mx-10 my-7 mb-10 ">
 
