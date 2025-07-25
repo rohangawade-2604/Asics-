@@ -54,17 +54,17 @@ export const Women = () => {
             <div className="cards_Sections flex  justify-evently mx-30  my-7 mb-10 gap-5 ">
 
               <div className="cards overflow-hidden ">
-                <img src={Runningw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1]' />
+                <img src={Runningw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
                 <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Running</button>
               </div>
 
               <div className="cards1 overflow-hidden">
-                <img src={Indoorsw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1]' />
+                <img src={Indoorsw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
                 <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Tennis</button>
               </div>
 
               <div className="cards2 overflow-hidden">
-                <img src={Tennisw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1]' />
+                <img src={Tennisw} alt="" className='h-60 w-120 transition delay-100 ease-in-out hover:scale-[1.1] cursor-pointer' />
                 <button className='border-2 w-45 h-10 rounded-[25px] my-5 ml-30 cursor-pointer text-white bg-[#001f62]  transition delay-100 ease-in-out hover:bg-amber-800 '>Indoors</button>
               </div>
 
