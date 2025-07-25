@@ -76,6 +76,13 @@ export const Women = () => {
             </div>
 
 
+            {/* ------------- LiteShow ection ------------------ */}
+
+            <div className="gelkayano">
+              <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ 32</h1>
+              <img src={Womengel} alt="" className='cursor-pointer' />
+            </div>
+
         </div>
       </div>
     </>
