@@ -4,6 +4,7 @@ import Tennisw from '../assets/tennisw.png'
 import Indoorsw from '../assets/indoorw.png'
 import Runningw from '../assets/runningw.png'
 import Womengel from '../assets/womengel.png'
+import Liteshow from '../assets/Liteshow.png'
 
 export const Women = () => {
   return (
@@ -80,7 +81,7 @@ export const Women = () => {
 
             <div className="gelkayano">
               <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ 32</h1>
-              <img src={Womengel} alt="" className='cursor-pointer' />
+              <img src={Liteshow} alt="" className='cursor-pointer' />
             </div>
 
         </div>
