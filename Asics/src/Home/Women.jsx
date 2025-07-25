@@ -1,5 +1,4 @@
 import React from 'react'
-import men from '../assets/Mens1.png'
 import Tennisw from '../assets/tennisw.png'
 import Indoorsw from '../assets/indoorw.png'
 import Runningw from '../assets/runningw.png'
