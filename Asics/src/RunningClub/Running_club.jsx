@@ -19,13 +19,7 @@ export const Running_club = () => {
           </div>
 
 
-          {/* <!-- From Uiverse.io by liyaxu123 --> */}
-          <div className="form-control">
-            <input type="value" required=""/>
-              <label>
-                <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
-              </label>
-          </div>
+          
 
 
         </div>
