@@ -105,7 +105,7 @@ export const Women = () => {
 
             <div className="gelkayano">
               <h1 className='text-[36px] text-center text-[#312955]'>Apparel Collection</h1>
-              <img src={Apparelw} alt="" className='cursor-pointer' />hdh
+              <img src={Apparelw} alt="" className='cursor-pointer' />
             </div>
 
         </div>
