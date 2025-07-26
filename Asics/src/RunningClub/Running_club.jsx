@@ -6,22 +6,31 @@ export const Running_club = () => {
   return (
     <>
 
-    <div className="Running_club">
-      <div className="running_container ">
+      <div className="Running_club">
+        <div className="running_container ">
 
-        <div className="img1 h-[600px] w-full bg-cover bg-center relative " style={{ backgroundImage: `url(${Runningclub})` }}> 
-          <figure className='absolute bottom-20 left-50 '>
-           <h1 className='text-4xl font-bold text-white'>ASICS RUNNING CLUB</h1>
-           <p className='text-white w-[60%] my-5'>Come join us for our upcoming sessions! Take a look at our monthly schedule for the upcoming training programmes and sign up for the sessions with our highly-experience coaches.</p>
-           <button className='effect_button mr-10 text-[16px]'>Sign Up here</button>
-            <button className='effect_button '>Join Facebook Group</button>           
-          </figure>
+          <div className="img1 h-[600px] w-full bg-cover bg-center relative " style={{ backgroundImage: `url(${Runningclub})` }}>
+            <figure className='absolute bottom-20 left-50 '>
+              <h1 className='text-4xl font-bold text-white'>ASICS RUNNING CLUB</h1>
+              <p className='text-white w-[60%] my-5'>Come join us for our upcoming sessions! Take a look at our monthly schedule for the upcoming training programmes and sign up for the sessions with our highly-experience coaches.</p>
+              <button className='effect_button mr-10 text-[16px]'>Sign Up here</button>
+              <button className='effect_button '>Join Facebook Group</button>
+            </figure>
+          </div>
+
+
+          {/* <!-- From Uiverse.io by liyaxu123 --> */}
+          <div className="form-control">
+            <input type="value" required=""/>
+              <label>
+                <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+              </label>
+          </div>
+
+
         </div>
-
-
       </div>
-    </div>
-      
+
 
     </>
   )
