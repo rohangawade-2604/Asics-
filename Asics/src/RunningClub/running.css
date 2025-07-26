@@ -1,55 +1,54 @@
-button {
-  height: 2.8em;
-  width: 9em;
+.effect_button {
+  height: 2.3em;
+  width: 15em;
   background: transparent;
-  -webkit-animation: jello-horizontal 0.9s both;
   animation: jello-horizontal 0.9s both;
-  border: 2px solid #016dd9;
+  /* border: 2px solid #001e64; */
+  /* border: 2px solid white; */
   outline: none;
-  color: #016dd9;
+  margin-top: 3px;
+  /* color: #001e64; */
+  color: white;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
 }
 
-button:hover {
-  background: #016dd9;
-  color: #ffffff;
+.effect_button:hover {
+  /* background: #001e64; */
+  background: white;
+  /* color: #ffffff; */
+  color: black;
   animation: squeeze3124 0.9s both;
 }
 
 @keyframes squeeze3124 {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
   30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
     transform: scale3d(1.25, 0.75, 1);
   }
 
   40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
     transform: scale3d(0.75, 1.25, 1);
   }
 
   50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
     transform: scale3d(1.15, 0.85, 1);
   }
 
   65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
     transform: scale3d(0.95, 1.05, 1);
   }
 
   75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
     transform: scale3d(1.05, 0.95, 1);
   }
 
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
