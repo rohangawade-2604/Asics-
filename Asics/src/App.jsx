@@ -30,7 +30,6 @@ function App() {
 
     <Descript/>
     <Footer/>
-aa
     </>
   )
 }
