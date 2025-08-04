@@ -18,14 +18,14 @@ function App() {
     <>
     <Navbar/>
 
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/men" element={<Men/>}/>
-      <Route path="/women" element={<Women/>}/>
-      <Route path="/kids" element={<Kids/>}/>
-      <Route path="/sportstyle" element={<SportStyle/>}/>
-      <Route path="/Running_club" element={<Running_club/>}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/men" element={<Men/>}/>
+        <Route path="/women" element={<Women/>}/>
+        <Route path="/kids" element={<Kids/>}/>
+        <Route path="/sportstyle" element={<SportStyle/>}/>
+        <Route path="/Running_club" element={<Running_club/>}/>
+      </Routes>
 
 
     <Descript/>

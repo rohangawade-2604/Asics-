@@ -19,7 +19,9 @@ export const Running_club = () => {
           </div>
 
 
-          
+          <div className="club_members">
+            
+          </div>
 
 
         </div>
