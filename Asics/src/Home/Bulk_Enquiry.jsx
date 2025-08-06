@@ -1,9 +1,12 @@
 import React from 'react'
+import bulken from '../assets/Bulken.png'
 
 export const Bulk_Enquiry = () => {
   return (
     <>
-      <h1>hellow world</h1>
+      <div className="bulk_img">
+        <img src={bulken} alt="" />
+      </div>
     </>
   )
 }
