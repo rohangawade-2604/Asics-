@@ -7,7 +7,7 @@ export const Bulk_Enquiry = () => {
     <>
     <div className="bulk_enquiry">
 
-         <div className="bulk_enquiry_container">
+         <div className="bulk_enquiry_container bg-gray-200">
 
             <div className="bulk_img cursor-pointer">
                 <img src={bulken} alt="" />
@@ -35,25 +35,29 @@ export const Bulk_Enquiry = () => {
             </div>
 
 
-            <form action="">
+            <form action="" className='flex flex-col items-center py-10'>
                 <h1 className='text-[36px] text-[#312955] text-center'>Enquiry Form</h1>
                 <div className="name_organisation flex flex-row gap-4 ">
-                    <input type="text" name="name" id="name" placeholder='Name of the Representative' className='border-2 p-3 w-100 mt-5'/>
-                    <input type="text" name="organisation" id="organisation" placeholder='Name of the Organisation' className='border-2 p-3 w-100 mt-5'/>
+                    <input type="text" name="name" id="name" placeholder='Name of the Representative' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
+                    <input type="text" name="organisation" id="organisation" placeholder='Name of the Organisation' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
                 </div>
 
                 <div className="email_contact flex flex-row gap-4 ">
-                    <input type="email" name="email" id="email" placeholder='Enter the Email' className='border-2 p-3 w-100 mt-5'/>
-                    <input type="text" name="contact" id="contact" placeholder='Contact Number' className='border-2 p-3 w-100 mt-5'/>
+                    <input type="email" name="email" id="email" placeholder='Enter the Email' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
+                    <input type="text" name="contact" id="contact" placeholder='Contact Number' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
                 </div>
 
                 <div className="Required_Quantity flex flex-row gap-4 ">
-                    <input type="text" name="requirement" id="requirement" placeholder='Requirement' className='border-2 p-3 w-100 mt-5'/>
-                    <input type="number" name="quantity" id="quantity" placeholder='Required Quantity' className='border-2 p-3 w-100 mt-5'/>
+                    <input type="text" name="requirement" id="requirement" placeholder='Requirement' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
+                    <input type="number" name="quantity" id="quantity" placeholder='Required Quantity' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
                 </div>
 
                 <div className="msg">
-                    <textarea name="msg" id="" cols="30" rows="10" placeholder='Message'></textarea>
+                    <textarea name="msg" id="" cols="30" rows="10" placeholder='Enter the Message' className=' p-3 w-204 mt-5 bg-white rounded-b-[15px]'></textarea>
+                </div>
+
+                <div className="button">
+                    <button type='submit' className='p-3 w-100 mt-5 bg-[#001f62] text-white rounded-[15px]'>Send Message</button>
                 </div>
             </form>
         </div>
