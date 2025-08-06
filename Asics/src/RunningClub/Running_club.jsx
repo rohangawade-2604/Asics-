@@ -28,7 +28,21 @@ export const Running_club = () => {
 
 
           <div className="club_members">
-              <h1>CLUB MEMBERS IN ACTION</h1>
+              <h1 className='text-[36px] text-center text-[#312955] '>CLUB MEMBERS IN ACTION</h1>
+
+              <div className="imgs flex justify-evently gap-5 p-3  pl-[22%]">
+                <img src={CB1} alt="" />
+                <img src={CB2} alt="" />
+                <img src={CB3} alt="" />
+                <img src={CB4} alt="" />
+              </div>
+
+              <div className="img1 flex justify-evently gap-5 p-3  pl-[22%]">
+                <img src={CB5} alt="" />
+                <img src={CB6} alt="" />
+                <img src={CB7} alt="" />
+                <img src={CB8} alt="" />
+              </div>
           </div>
 
 
