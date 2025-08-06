@@ -47,7 +47,7 @@ export const Navbar = () => {
             </li>
 
             <li>
-                <Link to='/'>Bulk Enquiry</Link>
+                <Link to='/bulk_enquiry'>Bulk Enquiry</Link>
             </li>
         </ul>
 
