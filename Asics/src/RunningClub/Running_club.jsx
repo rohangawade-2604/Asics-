@@ -1,6 +1,14 @@
 import React from 'react'
 import './running.css'
 import Runningclub from '../assets/Runningclub.png'
+import CB1 from '../assets/CB1.png'
+import CB2 from '../assets/CB2.png'
+import CB3 from '../assets/CB3.png'
+import CB4 from '../assets/CB4.png'
+import CB5 from '../assets/CB5.png'
+import CB6 from '../assets/CB6.png'
+import CB7 from '../assets/CB7.png'
+import CB8 from '../assets/CB8.png'
 
 export const Running_club = () => {
   return (
@@ -20,7 +28,7 @@ export const Running_club = () => {
 
 
           <div className="club_members">
-            
+              
           </div>
 
 
