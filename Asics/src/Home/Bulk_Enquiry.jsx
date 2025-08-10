@@ -35,7 +35,7 @@ export const Bulk_Enquiry = () => {
             </div>
 
 
-            <form action="" className='flex flex-col items-center py-10 border-2'>
+            <form action="" className='flex flex-col items-center py-10 '>
                 <h1 className='text-[36px] text-[#312955] text-center'>Enquiry Form</h1>
                 <div className="name_organisation flex flex-row gap-4 ">
                     <input type="text" name="name" id="name" placeholder='Name of the Representative' className=' p-3 w-100 mt-5 bg-white rounded-b-[15px]'/>
