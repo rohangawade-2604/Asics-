@@ -94,8 +94,8 @@ export const Bulk_Enquiry = () => {
             <div className="sliders">
                 {
                     Corousel.map((item , id) => (
-                        <div className="slider1" key={id}>
-                            <img src={item.img} alt="" />
+                        <div className="slider1 uppercase" key={id}>
+                            <img src={item.img} alt="" className='w-100'/>
                             <h1>{item.h1}</h1>
                             <p>{item.code}</p>
                             <p>{item.price}</p>
