@@ -102,12 +102,15 @@ export const Bulk_Enquiry = () => {
             </form>
         </div>
 
+
+
+
         <div className="Corousel">
             <div className="sliders px-15 py-5">
                 <Slider {...settings}>
                 {
                     Corousel.map((item , id) => (
-                        <div className="slider1 uppercase flex my-5 gap-3 overflow-hidden" key={id}>
+                        <div className="slider1 uppercase flex my-5 gap-3" key={id}>
                             <img src={item.img} alt="" className='w-100 p-10 transition-all ease-in-out duration-300 hover:transform hover:scale-[1.1]'/>
                             <div className='flex flex-col items-center py-5'>
                                 <h1>{item.h1}</h1>
