@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import bulken from '../assets/Bulken.png'
 import Rupees from '../assets/rupees.png'
-import {fetch} from "axios"
+import axios, {Axios} from "axios"
 
 
 export const Bulk_Enquiry = () => {
@@ -12,7 +12,7 @@ export const Bulk_Enquiry = () => {
 
     const fetchData = async() => {
         try{
-            const data = await fetch.get(API);
+            const data = await axios.get(API);
             const fulldata = await data.data;
             setCorousel(fulldata)
         }
@@ -97,7 +97,7 @@ export const Bulk_Enquiry = () => {
                             <img src={item.img} alt="" />
                             <h1>{item.h1}</h1>
                             <p>{item.code}</p>
-                            <p1>{item.price}</p1>
+                            <p>{item.price}</p>
                         </div>      
                     ))
                 }
