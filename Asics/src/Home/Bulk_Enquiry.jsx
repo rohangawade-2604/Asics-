@@ -5,6 +5,7 @@ import Rupees from '../assets/rupees.png'
 import axios, {Axios} from "axios"
 
 
+
 export const Bulk_Enquiry = () => {
     const [Corousel , setCorousel] = useState([])
 
@@ -23,7 +24,7 @@ export const Bulk_Enquiry = () => {
 
     useEffect(() => {
         fetchData();
-    })
+    },[])
 
 
 
