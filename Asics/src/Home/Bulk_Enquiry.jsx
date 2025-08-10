@@ -3,6 +3,10 @@ import { useState, useEffect } from 'react'
 import bulken from '../assets/Bulken.png'
 import Rupees from '../assets/rupees.png'
 import axios, {Axios} from "axios"
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -27,6 +31,14 @@ export const Bulk_Enquiry = () => {
     },[])
 
 
+
+    var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2
+  };
 
 
   return (
@@ -91,18 +103,29 @@ export const Bulk_Enquiry = () => {
         </div>
 
         <div className="Corousel">
-            <div className="sliders">
+            <div className="sliders px-15 py-5">
+                <Slider {...settings}>
                 {
                     Corousel.map((item , id) => (
-                        <div className="slider1 uppercase" key={id}>
-                            <img src={item.img} alt="" className='w-100'/>
-                            <h1>{item.h1}</h1>
-                            <p>{item.code}</p>
-                            <p>{item.price}</p>
-                        </div>      
+                        <div className="slider1 uppercase flex my-5 gap-3 overflow-hidden" key={id}>
+                            <img src={item.img} alt="" className='w-100 p-10 transition-all ease-in-out duration-300 hover:transform hover:scale-[1.1]'/>
+                            <div className='flex flex-col items-center py-5'>
+                                <h1>{item.h1}</h1>
+                                <p>{item.code}</p>
+                                <p>{item.price}</p>
+                            </div>
+
+                            
+                        </div> 
+                             
                     ))
                 }
+                </Slider>
             </div>
+
+             <div className="button ">
+                    <button type='submit' className='p-3 ml-[43.5%] mt-6 bg-[#001f62] text-white transition delay-100 ease-in-out hover:bg-white hover:text-[#001b61] hover:border-1 cursor-pointer mb-6'>Download Full Catalogue</button>
+                </div>
         </div>
     </div>
     </>
