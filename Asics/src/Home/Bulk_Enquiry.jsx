@@ -1,8 +1,33 @@
-import React from 'react'
+import React from 'react'   
+import { useState, useEffect } from 'react'
 import bulken from '../assets/Bulken.png'
 import Rupees from '../assets/rupees.png'
+import {fetch} from "axios"
+
 
 export const Bulk_Enquiry = () => {
+    const [Corousel , setCorousel] = useState([])
+
+    const API = "https://all-project-api-1.onrender.com/posts";
+
+    const fetchData = async() => {
+        try{
+            const data = await fetch.get(API);
+            const fulldata = await data.data;
+            setCorousel(fulldata)
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        fetchData();
+    })
+
+
+
+
   return (
     <>
     <div className="bulk_enquiry">
@@ -59,7 +84,24 @@ export const Bulk_Enquiry = () => {
                 <div className="button">
                     <button type='submit' className='p-3 w-100 mt-5 bg-[#001f62] text-white rounded-[15px] transition delay-100 ease-in-out hover:bg-white hover:text-[#001b61] cursor-pointer'>Send Message</button>
                 </div>
+
+
             </form>
+        </div>
+
+        <div className="Corousel">
+            <div className="sliders">
+                {
+                    Corousel.map((item , id) => (
+                        <div className="slider1" key={id}>
+                            <img src={item.img} alt="" />
+                            <h1>{item.h1}</h1>
+                            <p>{item.code}</p>
+                            <p1>{item.price}</p1>
+                        </div>      
+                    ))
+                }
+            </div>
         </div>
     </div>
     </>
