@@ -13,107 +13,86 @@ import CB8 from '../assets/CB8.png'
 
 export const Running_club = () => {
 
-  const [coaches , setCoaches] =useState([])
+  const [coaches, setCoaches] = useState([])
 
   const API = "https://all-project-api-1.onrender.com/Coaches";
 
   const FetchData = async () => {
     try {
-      const data = await axios.get(API);
-      const fulldata = await data.data;
-      setCoaches(fulldata);
+      const { data } = await axios.get(API);
+      setCoaches(data);
     }
-    catch(err){
+    catch (err) {
       console.log(err)
     }
   }
 
   useEffect(() => {
     FetchData();
-  })
+  }, [])
+
   return (
-    <>
+    <div className="Running_club">
+      <div className="running_container ">
 
-      <div className="Running_club">
-        <div className="running_container ">
-
-          <div className="img1 h-[600px] w-full bg-cover bg-center relative " style={{ backgroundImage: `url(${Runningclub})` }}>
-            <figure className='absolute bottom-20 left-50 '>
-              <h1 className='text-4xl font-bold text-white'>ASICS RUNNING CLUB</h1>
-              <p className='text-white w-[60%] my-5'>Come join us for our upcoming sessions! Take a look at our monthly schedule for the upcoming training programmes and sign up for the sessions with our highly-experience coaches.</p>
-              <button className='effect_button mr-10 text-[16px]'>Sign Up here</button>
-              <button className='effect_button '>Join Facebook Group</button>
-            </figure>
-          </div>
-
-
-        <div className="coaches">
-          <h1 className='text-[36px] text-center text-[#312955] '>OUR COACHES</h1>
-          {
-            coaches.map((el , id) => {
-              <div className="coaches_part" key={id}>
-                <div className="one">
-                    <img src={el.img} alt="" />
-                    <h1>{el.name}</h1>
-                </div>
-
-                <p>{el.coach}</p>
-        
-              </div>
-            })  
-          }
+        {/* Hero Section */}
+        <div
+          className="img1 h-[600px] w-full bg-cover bg-center relative"
+          style={{ backgroundImage: `url(${Runningclub})` }}
+        >
+          <figure className="absolute bottom-20 left-50">
+            <h1 className="text-4xl font-bold text-white">ASICS RUNNING CLUB</h1>
+            <p className="text-white w-[60%] my-5">
+              Come join us for our upcoming sessions! Take a look at our monthly schedule for the upcoming training programmes and sign up for the sessions with our highly-experience coaches.
+            </p>
+            <button className="effect_button mr-10 text-[16px]">Sign Up here</button>
+            <button className="effect_button">Join Facebook Group</button>
+          </figure>
         </div>
 
-
-        {/*------------ Club Members part...------------- */}
-
-          <div className="club_members">
-            <h1 className='text-[36px] text-center text-[#312955] '>CLUB MEMBERS IN ACTION</h1>
-
-            <div className="imgs flex justify-evently gap-5 p-3  pl-[20%]">
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB1} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+        {/* Coaches Section */}
+        <div className="coaches">
+          <h1 className="text-[36px] text-center text-[#312955]">OUR COACHES</h1>
+          {coaches.map((el, id) => (
+            <div className="coaches_part" key={id}>
+              <div className="one">
+                <img src={el.img} alt={el.name} />
+                <h1>{el.name}</h1>
               </div>
-
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB2} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
-              </div>
-
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB3} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
-              </div>
-
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB4} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
-              </div>
-
+              <p>{el.coach}</p>
             </div>
+          ))}
+        </div>
 
-            <div className="img1 flex justify-evently gap-5 p-3  pl-[20%]">
+        {/* Club Members Section */}
+        <div className="club_members">
+          <h1 className="text-[36px] text-center text-[#312955]">CLUB MEMBERS IN ACTION</h1>
 
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB5} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+          <div className="imgs flex justify-evenly gap-5 px-76 pl-[20%]">
+            {[CB1, CB2, CB3, CB4].map((img, i) => (
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden" key={i}>
+                <img
+                  src={img}
+                  alt=""
+                  className="h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover:transform hover:scale-[1.1] hover:grayscale-100"
+                />
               </div>
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB6} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
-              </div>
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB7} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
-              </div>
-              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
-                <img src={CB8} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
-              </div>
-
-            </div>
+            ))}
           </div>
 
-
+          <div className="img1 flex justify-evenly gap-5 pt-8 px-76  pl-[20%]">
+            {[CB5, CB6, CB7, CB8].map((img, i) => (
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden" key={i}>
+                <img
+                  src={img}
+                  alt=""
+                  className="h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover:transform hover:scale-[1.1] hover:grayscale-100"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
-
-    </>
+    </div>
   )
 }
-
-
