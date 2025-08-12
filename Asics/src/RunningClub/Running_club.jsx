@@ -30,40 +30,40 @@ export const Running_club = () => {
           <div className="club_members">
             <h1 className='text-[36px] text-center text-[#312955] '>CLUB MEMBERS IN ACTION</h1>
 
-            <div className="imgs flex justify-evently gap-5 p-3  pl-[22%]">
-                <div className="wrapper">
-                    <img src={CB1} alt="" />
-                </div>
+            <div className="imgs flex justify-evently gap-5 p-3  pl-[20%]">
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB1} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
 
-                <div className="wrapper">
-                    <img src={CB2} alt="" />
-                </div>
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB2} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
 
-                <div className="wrapper">
-                    <img src={CB3} alt="" />
-                </div>
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB3} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
 
-                <div className="wrapper">
-                    <img src={CB4} alt="" />
-                </div>
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB4} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
 
             </div>
 
-            <div className="img1 flex justify-evently gap-5 p-3  pl-[22%]">
+            <div className="img1 flex justify-evently gap-5 p-3  pl-[20%]">
 
-                <div className="wrapper">
-                   <img src={CB5} alt="" />
-                </div>
-                <div className="wrapper">
-                    <img src={CB6} alt="" />
-                </div>
-                <div className="wrapper">
-                    <img src={CB7} alt="" />
-                </div>
-                <div className="wrapper">
-                     <img src={CB8} alt="" />
-                </div>                    
-  
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB5} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB6} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB7} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
+              <div className="wrapper h-[220px] w-[220px] overflow-hidden  ">
+                <img src={CB8} alt="" className='h-[100%] w-[100%] grayscale-0 transition-all duration-300 ease-in-out cursor-pointer hover: transform hover:scale-[1.1] hover:grayscale-100 ' />
+              </div>
+
             </div>
           </div>
 
