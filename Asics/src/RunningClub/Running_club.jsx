@@ -11,6 +11,11 @@ import CB6 from '../assets/CB6.png'
 import CB7 from '../assets/CB7.png'
 import CB8 from '../assets/CB8.png'
 
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export const Running_club = () => {
 
   const [coaches, setCoaches] = useState([])
@@ -30,6 +35,15 @@ export const Running_club = () => {
   useEffect(() => {
     FetchData();
   }, [])
+
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 4
+  };
 
   return (
     <div className="Running_club">
@@ -51,17 +65,24 @@ export const Running_club = () => {
         </div>
 
         {/* Coaches Section */}
-        <div className="coaches">
-          <h1 className="text-[36px] text-center text-[#312955]">OUR COACHES</h1>
-          {coaches.map((el, id) => (
-            <div className="coaches_part" key={id}>
-              <div className="one">
+        <div className="coaches my-15 mx-20">
+          <h1 className="text-[36px] text-center text-[#312955] ">OUR COACHES</h1>
+          <Slider {...settings}>
+
+            {coaches.map((el, id) => (
+              <div className="coaches_part mb-10  " key={id}>
+
                 <img src={el.img} alt={el.name} />
-                <h1>{el.name}</h1>
+
+                <div className="one flex flex-col items-center gap-5">
+
+                    <h1 className='uppercase text-[20px] mt-2'>{el.name}</h1>
+                    <p>{el.coach}</p>
+                </div>
               </div>
-              <p>{el.coach}</p>
-            </div>
-          ))}
+            ))}
+
+          </Slider>
         </div>
 
         {/* Club Members Section */}
