@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import './running.css'
 import Runningclub from '../assets/Runningclub.png'
 import CB1 from '../assets/CB1.png'
@@ -11,6 +12,25 @@ import CB7 from '../assets/CB7.png'
 import CB8 from '../assets/CB8.png'
 
 export const Running_club = () => {
+
+  const [coaches , setCoaches] =useState([])
+
+  const API = "https://all-project-api-1.onrender.com/Coaches";
+
+  const FetchData = async () => {
+    try {
+      const data = await axios.get(API);
+      const fulldata = await data.data;
+      setCoaches(fulldata);
+    }
+    catch(err){
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    FetchData();
+  })
   return (
     <>
 
@@ -26,6 +46,26 @@ export const Running_club = () => {
             </figure>
           </div>
 
+
+        <div className="coaches">
+          <h1 className='text-[36px] text-center text-[#312955] '>OUR COACHES</h1>
+          {
+            coaches.map((el , id) => {
+              <div className="coaches_part" key={id}>
+                <div className="one">
+                    <img src={el.img} alt="" />
+                    <h1>{el.name}</h1>
+                </div>
+
+                <p>{el.coach}</p>
+        
+              </div>
+            })  
+          }
+        </div>
+
+
+        {/*------------ Club Members part...------------- */}
 
           <div className="club_members">
             <h1 className='text-[36px] text-center text-[#312955] '>CLUB MEMBERS IN ACTION</h1>
