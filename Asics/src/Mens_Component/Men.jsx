@@ -16,8 +16,8 @@ import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
 
-  const [hover , setHover] = useState([])
-  const [current , setCurrent] = useState(0)
+  const [hover, setHover] = useState([])
+  const [current, setCurrent] = useState(0)
 
   const handleMedia = (index) => {
     setCurrent(index)
@@ -26,12 +26,12 @@ export const Men = () => {
   const api = "https://all-project-api-1.onrender.com/Mens_shoes_product";
 
   const fetchingData = async () => {
-    try{ 
+    try {
       const get = await axios.get(api);
       const fulldata = await get.data;
       setHover(fulldata);
     }
-    catch(err){
+    catch (err) {
       console.log(err);
     };
   }
@@ -119,7 +119,7 @@ export const Men = () => {
           {/*--------------- LUXE PACK Sections------------------- */}
 
           <div className="Luxe_Pack">
- 
+
             <h1 className='text-[36px] text-center text-[#312955] my-5'>Luxe Pack</h1>
 
             <img src={Homepic2} alt="" className='cursor-pointer' />
@@ -129,25 +129,32 @@ export const Men = () => {
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
           <div className="product">
-            <div className="images">
-               <div className="preview ">
-                   <img src={hover[current]?.src} alt="" />
-               </div>
+            {
+              hover.map((el, i) => (
+                <div className="product_part" key={i}>
 
-               <div className="hover-imgs ">
-                  {
-                    hover.map((img , i) => (
-                      <img src={img.src} alt="" key={i} onMouseEnter={() => handleMedia(i)} onMouseLeave={() => handleMedia(0)}/>
-                    ))
-                  }
-               </div>
-            </div>
+                  <div className="images" >
 
-            <div className="details">
-              <span>GEL KAYANO</span>
-              <p>Mens Running Shoes</p>
-              <p>Rs. 16,999</p>
-            </div>
+                    <div className="preview ">
+                      <img src={hover[current]?.src} alt="" />
+                    </div>
+
+                    <div className="hover-imgs ">
+                      <img src={el.current.src} alt="" />
+                    </div>
+
+                  </div>
+
+                  <div className="details">
+                    <span>GEL KAYANO</span>
+                    <p>Mens Running Shoes</p>
+                    <p>Rs. 16,999</p>
+                  </div>
+                </div>
+
+              ))
+            }
+
           </div>
 
 
@@ -160,28 +167,28 @@ export const Men = () => {
           </div>
 
 
-            {/* ------------- Blast Section ------------------ */}
+          {/* ------------- Blast Section ------------------ */}
 
           <div className="Blast my-5">
             <h1 className='text-[36px] text-center text-[#312955]'>BLAST Series</h1>
             <img src={Blast} alt="" className='cursor-pointer' />
           </div>
 
-           {/* ------------- Running Collections Section ------------------ */}
+          {/* ------------- Running Collections Section ------------------ */}
 
           <div className="Running_Collections my-5">
             <h1 className='text-[36px] text-center text-[#312955]'>Running Collections</h1>
             <img src={RunCollec} alt="" className='cursor-pointer' />
           </div>
 
-            {/* ------------- SPORTSTYLE COLLECTION Section ------------------ */}
+          {/* ------------- SPORTSTYLE COLLECTION Section ------------------ */}
 
           <div className="Running_Collections my-5">
             <h1 className='text-[36px] text-center text-[#312955]'>SPORTSTYLE COLLECTION</h1>
             <img src={Mensports} alt="" className='cursor-pointer' />
           </div>
 
-           {/* ------------- ASICS Clothing Section ------------------ */}
+          {/* ------------- ASICS Clothing Section ------------------ */}
 
           <div className="Running_Collections my-5">
             <h1 className='text-[36px] text-center text-[#312955]'>ASICS Clothing</h1>
