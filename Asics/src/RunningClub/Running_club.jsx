@@ -70,13 +70,13 @@ export const Running_club = () => {
           <Slider {...settings}>
 
             {coaches.map((el, id) => (
-              <div className="coaches_part mb-10  " key={id}>
+              <div className="coaches_part my-7  " key={id}>
 
                 <img src={el.img} alt={el.name} />
 
                 <div className="one flex flex-col items-center gap-5">
 
-                    <h1 className='uppercase text-[20px] mt-2'>{el.name}</h1>
+                    <h1 className='uppercase text-[20px] mt-2  text-[#312955] font-bold'>{el.name}</h1>
                     <p>{el.coach}</p>
                 </div>
               </div>
