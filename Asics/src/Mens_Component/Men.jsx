@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import men from '../assets/Mens1.png'
 import men1 from '../assets/Mens2.png'
 import './Men.css'
@@ -13,6 +15,28 @@ import RunCollec from '../assets/RunCollec.png'
 import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
+
+  const [hover , setHover] = useState([])
+
+  const api = "https://all-project-api-1.onrender.com/Mens_shoes_product";
+
+  const fetchingData = async () => {
+    try{ 
+      const get = await axios.get(api);
+      const fulldata = await get.data;
+      setHover(fulldata);
+    }
+    catch(err){
+      console.log(err);
+    };
+  }
+
+  useEffect(() => {
+    fetchingData();
+  })
+
+
+
   return (
     <>
       <div className="mens">
@@ -90,11 +114,37 @@ export const Men = () => {
           {/*--------------- LUXE PACK Sections------------------- */}
 
           <div className="Luxe_Pack">
-
+ 
             <h1 className='text-[36px] text-center text-[#312955] my-5'>Luxe Pack</h1>
 
             <img src={Homepic2} alt="" className='cursor-pointer' />
           </div>
+
+
+          {/*---------` Mens Shoes Card Section Data...----------------- */}
+
+          <div className="product ">
+            <div className="images">
+               <div className="preview ">
+                   <img src={Running} alt="" className='h-[100%] w-[100%]'/>
+               </div>
+
+               <div className="hover-imgs w-[100%] h-[30px] flex">
+                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
+                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
+                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
+                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
+               </div>
+            </div>
+
+            <div className="details">
+              <span>GEL KAYANO</span>
+              <p>Mens Running Shoes</p>
+              <p>Rs. 16,999</p>
+            </div>
+          </div>
+
+
 
           {/* ------------- GEL-KAYANO Section ------------------ */}
 
