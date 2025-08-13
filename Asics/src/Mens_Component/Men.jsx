@@ -128,34 +128,7 @@ export const Men = () => {
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
-          <div className="product">
-            {
-              hover.map((el, i) => (
-                <div className="product_part" key={i}>
-
-                  <div className="images" >
-
-                    <div className="preview ">
-                      <img src={hover[current]?.src} alt="" />
-                    </div>
-
-                    <div className="hover-imgs ">
-                      <img src={el.current.src} alt="" />
-                    </div>
-
-                  </div>
-
-                  <div className="details">
-                    <span>GEL KAYANO</span>
-                    <p>Mens Running Shoes</p>
-                    <p>Rs. 16,999</p>
-                  </div>
-                </div>
-
-              ))
-            }
-
-          </div>
+          
 
 
 
