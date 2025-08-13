@@ -11,12 +11,30 @@ import CB6 from '../assets/CB6.png'
 import CB7 from '../assets/CB7.png'
 import CB8 from '../assets/CB8.png'
 
+import beng from '../assets/beng.png'
+import beng2 from '../assets/beng2.png'
+import beng3 from '../assets/beng3.png'
+import beng4 from '../assets/beng4.png'
+import beng5 from '../assets/beng5.png'
+import beng6 from '../assets/beng6.png'
+
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const Running_club = () => {
+
+  const Runningslider = [
+    { id: 1, image: beng },
+    { id: 1, image: beng2 },
+    { id: 2, image: beng3 },
+    { id: 4, image: beng4 },
+    { id: 5, image: beng5 },
+    { id: 6, image: beng6 },
+
+  ]
 
   const [coaches, setCoaches] = useState([])
 
@@ -45,8 +63,16 @@ export const Running_club = () => {
     slidesToScroll: 4
   };
 
+   var setting = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
-    <div className="Running_club">
+    <div className="Running_club overflow-hidden">
       <div className="running_container ">
 
         {/* Hero Section */}
@@ -64,13 +90,31 @@ export const Running_club = () => {
           </figure>
         </div>
 
+       {/*------- Running club scrolling section-------- */}
+
+       <div className="running_slider my-5">
+        <h1 className="text-[30px] text-center text-[#312955] my-2">WHAT'S UP THIS MONTH?</h1>
+        <Slider {...setting}>
+
+        
+        {
+          Runningslider.map((el, id) => (
+            <div className="running_slider_img overflow-hidden " key={id}>
+              <img src={el.image} alt={el.id} className='px-18'/>
+            </div>
+          ))
+        }
+      </Slider>
+       </div>
+
+
         {/* Coaches Section */}
         <div className="coaches my-15 mx-20">
-          <h1 className="text-[36px] text-center text-[#312955] ">OUR COACHES</h1>
+          <h1 className="text-[30px] text-center text-[#312955] ">OUR COACHES</h1>
           <Slider {...settings}>
 
             {coaches.map((el, id) => (
-              <div className="coaches_part my-7  " key={id}>
+              <div className="coaches_part my-6 cursor-pointer " key={id}>
 
                 <img src={el.img} alt={el.name} />
 
@@ -87,7 +131,7 @@ export const Running_club = () => {
 
         {/* Club Members Section */}
         <div className="club_members">
-          <h1 className="text-[36px] text-center text-[#312955]">CLUB MEMBERS IN ACTION</h1>
+          <h1 className="text-[30px] text-center text-[#312955]">CLUB MEMBERS IN ACTION</h1>
 
           <div className="imgs flex justify-evenly gap-5 px-76 pl-[20%]">
             {[CB1, CB2, CB3, CB4].map((img, i) => (
