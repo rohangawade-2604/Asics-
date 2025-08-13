@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import men from '../assets/Mens1.png'
@@ -17,6 +17,11 @@ import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
 
   const [hover , setHover] = useState([])
+  const [current , setCurrent] = useState(0)
+
+  const handleMedia = (index) => {
+    setCurrent(index)
+  }
 
   const api = "https://all-project-api-1.onrender.com/Mens_shoes_product";
 
@@ -123,17 +128,18 @@ export const Men = () => {
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
-          <div className="product ">
+          <div className="product">
             <div className="images">
                <div className="preview ">
-                   <img src={Running} alt="" />
+                   <img src={hover[current]?.src} alt="" />
                </div>
 
                <div className="hover-imgs ">
-                  <img src={Running} alt="" />
-                  <img src={Running} alt="" />
-                  <img src={Running} alt="" />
-                  <img src={Running} alt="" />
+                  {
+                    hover.map((img , i) => (
+                      <img src={img.src} alt="" key={i} onMouseEnter={() => handleMedia(i)} onMouseLeave={() => handleMedia(0)}/>
+                    ))
+                  }
                </div>
             </div>
 
