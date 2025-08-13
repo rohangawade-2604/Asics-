@@ -1,6 +1,4 @@
-import React, { use } from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+
 import men from '../assets/Mens1.png'
 import men1 from '../assets/Mens2.png'
 import './Men.css'
@@ -15,32 +13,6 @@ import RunCollec from '../assets/RunCollec.png'
 import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
-
-  const [hover, setHover] = useState([])
-  const [current, setCurrent] = useState(0)
-
-  const handleMedia = (index) => {
-    setCurrent(index)
-  }
-
-  const api = "https://all-project-api-1.onrender.com/Mens_shoes_product";
-
-  const fetchingData = async () => {
-    try {
-      const get = await axios.get(api);
-      const fulldata = await get.data;
-      setHover(fulldata);
-    }
-    catch (err) {
-      console.log(err);
-    };
-  }
-
-  useEffect(() => {
-    fetchingData();
-  })
-
-
 
   return (
     <>
