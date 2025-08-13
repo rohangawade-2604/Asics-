@@ -126,14 +126,14 @@ export const Men = () => {
           <div className="product ">
             <div className="images">
                <div className="preview ">
-                   <img src={Running} alt="" className='h-[100%] w-[100%]'/>
+                   <img src={Running} alt="" />
                </div>
 
-               <div className="hover-imgs w-[100%] h-[30px] flex">
-                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
-                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
-                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
-                  <img src={Running} alt="" className='w-[100%] h-[30px]'/>
+               <div className="hover-imgs ">
+                  <img src={Running} alt="" />
+                  <img src={Running} alt="" />
+                  <img src={Running} alt="" />
+                  <img src={Running} alt="" />
                </div>
             </div>
 
