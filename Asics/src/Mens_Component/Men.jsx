@@ -143,7 +143,7 @@ export const Men = () => {
 
 
        
-  heyy
+
 
         </div>
       </div>
