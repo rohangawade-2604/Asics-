@@ -17,7 +17,6 @@ import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
 
   const [Corousel, setCorousel] = useState([])
-  const [current, setCurrent] = useState(0);
 
   const API = "https://all-project-api-1.onrender.com/Mens_shoes_product";
 
@@ -126,26 +125,25 @@ export const Men = () => {
           <div className="Mens_Shoes_Card">
           <h1 className='text-[36px] text-center text-[#312955] my-5'>Mens Shoes</h1>
 
-          <div className="shoes_card flex">
-          {
-            Corousel.map((el , id) => ( 
-              <div className="shoes_card1 flex flex-row" key={id}>
+          <div className="shoes_card flex justify-center gap-30">
+          
+              <div className="shoes_card1 ">
                 <div className="card_parts">
 
                
                 <div className="shoes_img">
 
-                  <div className="first_img">
-                    <img src={el.src} alt="" />
+                  <div className="first_img h-60 w-90">
+                    <img src="" alt="" className='border-2 h-60 w-80'/>
                   </div>
 
                   <div className="hover_image">
-                    <img src={el.src} alt="" />
+                    <img src="" alt=""  className='cursor-pointer'/>
                   </div>
 
                 </div>
 
-                <div className="shoes_details">
+                <div className="shoes_details flex flex-col items-center">
                   <span>{el.h1}</span>
                   <p>{el.p}</p>
                   <p>{el.Rs}</p>
@@ -153,8 +151,7 @@ export const Men = () => {
 
                  </div>
               </div>
-            ))
-          }
+        
           </div>
           </div>
 
