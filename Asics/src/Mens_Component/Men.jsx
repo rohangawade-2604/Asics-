@@ -101,7 +101,7 @@ export const Men = () => {
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
-          <h1>hellow part</h1>
+          
 
 
 
