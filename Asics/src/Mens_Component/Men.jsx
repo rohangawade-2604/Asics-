@@ -126,11 +126,13 @@ export const Men = () => {
           <div className="Mens_Shoes_Card">
           <h1 className='text-[36px] text-center text-[#312955] my-5'>Mens Shoes</h1>
 
-          <div className="shoes_card">
+          <div className="shoes_card flex">
           {
-            Corousel.map((el , id) => (
-              <div className="shoes_card1" key={id}>
+            Corousel.map((el , id) => ( 
+              <div className="shoes_card1 flex flex-row" key={id}>
+                <div className="card_parts">
 
+               
                 <div className="shoes_img">
 
                   <div className="first_img">
@@ -148,6 +150,8 @@ export const Men = () => {
                   <p>{el.p}</p>
                   <p>{el.Rs}</p>
                 </div>
+
+                 </div>
               </div>
             ))
           }
