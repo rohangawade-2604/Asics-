@@ -21,12 +21,12 @@ export const Men = () => {
   const API = "https://all-project-api-1.onrender.com/Mens_shoes_product";
 
   const fetchData = async () => {
-    try{
+    try {
       const data = await axios.get(API);
       const fulldata = await data.data;
       setCorousel(fulldata);
     }
-    catch(error){
+    catch (error) {
       console.log(error)
     };
 
@@ -122,37 +122,36 @@ export const Men = () => {
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
-          <div className="Mens_Shoes_Card">
-          <h1 className='text-[36px] text-center text-[#312955] my-5'>Mens Shoes</h1>
+          <div className="mens_shoes">
 
-          <div className="shoes_card flex justify-center gap-30">
-          
-              <div className="shoes_card1 ">
-                <div className="card_parts">
+            <div className="shoes_cards flex justify-around">
+              {
+                Corousel.map((el, id) => (
 
-               
-                <div className="shoes_img">
+                  <div className="shoes_card1" key={id}>
 
-                  <div className="first_img h-60 w-90">
-                    <img src="" alt="" className='border-2 h-60 w-80'/>
+                    <div className="images ">
+
+                      <div className="preview">
+                        <img src={el.src} alt="" className='h-60' />
+                      </div>
+
+                      <div className="hover_img w-20  ">
+                        <img src={el.src} alt="" className='h-15 cursor-pointer ' />
+                      </div>
+
+                    </div>
+
+                    <div className="details flex flex-col items-center">
+                      <h1 className='text-[24px] text-[#312955]'>{el.h1}</h1>
+                      <p className='text-[#312955]'>{el.p}</p>
+                      <p className='text-[#001f62]'>{el.Rs}</p>
+                    </div>
                   </div>
+                ))
+              }
 
-                  <div className="hover_image">
-                    <img src="" alt=""  className='cursor-pointer'/>
-                  </div>
-
-                </div>
-
-                <div className="shoes_details flex flex-col items-center">
-                  <span>{el.h1}</span>
-                  <p>{el.p}</p>
-                  <p>{el.Rs}</p>
-                </div>
-
-                 </div>
-              </div>
-        
-          </div>
+            </div>
           </div>
 
 
@@ -194,7 +193,7 @@ export const Men = () => {
           </div>
 
 
-       
+
 
 
         </div>
