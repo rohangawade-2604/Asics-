@@ -127,7 +127,7 @@ export const Bulk_Enquiry = () => {
             </div>
 
              <div className="button ">
-                    <button type='submit' className='p-3 ml-[43.5%] mt-6 bg-[#001f62] text-white transition delay-100 ease-in-out hover:bg-white hover:text-[#001b61] hover:border-1 cursor-pointer mb-6'>Download Full Catalogue</button>
+                    <button type='submit' className='p-3 ml-[43.5%] mt-6 bg-[#001f62] text-white transition delay-100 ease-in-out hover:bg-white hover:text-[#001b61] hover:border-1 cursor-pointer my-7'>Download Full Catalogue</button>
                 </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
-
+import React, { useState, useEffect } from 'react'
+import axios from "axios"
 import men from '../assets/Mens1.png'
 import men1 from '../assets/Mens2.png'
 import './Men.css'
@@ -14,6 +15,27 @@ import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
 
 export const Men = () => {
+
+  const [Corousel, setCorousel] = useState([])
+  const [current, setCurrent] = useState(0);
+
+  const API = "https://all-project-api-1.onrender.com/Mens_shoes_product";
+
+  const fetchData = async () => {
+    try{
+      const data = await axios.get(API);
+      const fulldata = await data.data;
+      setCorousel(fulldata);
+    }
+    catch(error){
+      console.log(error)
+    };
+
+  }
+
+  useEffect(() => {
+    fetchData();
+  });
 
   return (
     <>
@@ -101,7 +123,36 @@ export const Men = () => {
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
-          
+          <div className="Mens_Shoes_Card">
+          <h1 className='text-[36px] text-center text-[#312955] my-5'>Mens Shoes</h1>
+
+          <div className="shoes_card">
+          {
+            Corousel.map((el , id) => (
+              <div className="shoes_card1" key={id}>
+
+                <div className="shoes_img">
+
+                  <div className="first_img">
+                    <img src={el.src} alt="" />
+                  </div>
+
+                  <div className="hover_image">
+                    <img src={el.src} alt="" />
+                  </div>
+
+                </div>
+
+                <div className="shoes_details">
+                  <span>{el.h1}</span>
+                  <p>{el.p}</p>
+                  <p>{el.Rs}</p>
+                </div>
+              </div>
+            ))
+          }
+          </div>
+          </div>
 
 
 
