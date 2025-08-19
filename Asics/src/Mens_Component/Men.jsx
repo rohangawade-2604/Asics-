@@ -19,8 +19,8 @@ export const Men = () => {
   const [Corousel, setCorousel] = useState([])
   const [index , setIndex] = useState(0);
 
-  const handleClick = (i) => {
-    setIndex(i);
+  const handleClick = (index) => {
+    setIndex(index);
   }
 
   const API = "https://all-project-api-1.onrender.com/Mens_shoes_product";
@@ -128,7 +128,7 @@ export const Men = () => {
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
           <div className="mens_shoes">
-
+``
             <div className="shoes_cards flex justify-around">
               {
                 Corousel.map((el, id) => (
@@ -142,7 +142,7 @@ export const Men = () => {
                       </div>
 
                       <div className="hover_img w-20  ">
-                        <img src={el.src} alt="" className='h-15 cursor-pointer ' onMouseEnter={() => setIndex(1)} onMouseLeave={() => setIndex(0)} />
+                        <img src={el.src} alt="" className='h-15 cursor-pointer ' onMouseEnter={() => handleClick(id)} onMouseLeave={() => handleClick(0)} />
                       </div>
 
                     </div>
