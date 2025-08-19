@@ -17,6 +17,11 @@ import Asclothing from '../assets/Asclothing.png'
 export const Men = () => {
 
   const [Corousel, setCorousel] = useState([])
+  const [index , setIndex] = useState(0);
+
+  const handleClick = (i) => {
+    setIndex(i);
+  }
 
   const API = "https://all-project-api-1.onrender.com/Mens_shoes_product";
 
@@ -133,11 +138,11 @@ export const Men = () => {
                     <div className="images ">
 
                       <div className="preview">
-                        <img src={el.src} alt="" className='h-60' />
+                        <img src={el.src[index]} alt="" className='h-60' />
                       </div>
 
                       <div className="hover_img w-20  ">
-                        <img src={el.src} alt="" className='h-15 cursor-pointer ' />
+                        <img src={el.src} alt="" className='h-15 cursor-pointer ' onMouseEnter={() => setIndex(1)} onMouseLeave={() => setIndex(0)} />
                       </div>
 
                     </div>
