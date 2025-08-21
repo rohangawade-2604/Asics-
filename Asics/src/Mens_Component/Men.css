@@ -46,4 +46,82 @@
 
  /*------------- Mens Shoes Card Section Data --------------- */
 
+.product{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height: 480px;
+    width: 380px;
+    /* border: 2px solid black; */
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
 
+.product:hover{
+   background-color: aliceblue;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preview{
+    height: 270px;
+    width: 100%;
+}
+
+.preview img{
+    width: 100%;
+    height: 100%;   
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.img-hover{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    /* border: 2px solid black; */
+    margin-bottom: 10px;
+    scale: 0;
+    opacity: 0;
+    transform-origin: top left;
+    transition: scale 0.3s, opacity 0.5s;
+}
+
+.product:hover .img-hover{
+   scale: 1;
+    opacity: 1;
+}
+
+.img-hover img{
+    padding: 2px;
+    /* border: 2px solid black; */
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-hover img:hover{
+    transform: scale(1.1);
+    /* border: 1px solid black; */
+}
+
+.details{
+    transform: translateY(-30px);
+    transition: all 0.5s;
+}
+
+.product:hover .details{
+    transform: translateY(0px);
+}

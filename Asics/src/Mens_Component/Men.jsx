@@ -16,30 +16,33 @@ import Asclothing from '../assets/Asclothing.png'
 
 export const Men = () => {
 
-  const [Corousel, setCorousel] = useState([])
-  const [index , setIndex] = useState(0);
+  const [current, setCurrent] = useState({});
+  const [data, setData] = useState([]);
 
-  const handleClick = (index) => {
-    setIndex(index);
-  }
+   const handleMediaChange = (productId, index) => {
+    setCurrent((prev) => ({
+      ...prev,
+      [productId]: index
+    }));
+  };
 
-  const API = "https://all-project-api-1.onrender.com/Mens_shoes_product";
+  const API = "https://all-project-api-1.onrender.com/Mens_shoes_product"
 
   const fetchData = async () => {
-    try {
-      const data = await axios.get(API);
-      const fulldata = await data.data;
-      setCorousel(fulldata);
+    try{
+      const response = await axios.get(API)
+      const data = await response.data;
+      setData(data)
     }
-    catch (error) {
+    catch(error){
       console.log(error)
-    };
-
+    }
   }
 
   useEffect(() => {
     fetchData();
   });
+
 
   return (
     <>
@@ -126,39 +129,46 @@ export const Men = () => {
 
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
+        <div className="parent_card">
+          <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
+        <div className="first_shoes_card flex justify-around">
+        {
+          data.map((el) => (
+             <div className="product" key={el.id}>
+            <div className="images">
 
-          <div className="mens_shoes">
-``
-            <div className="shoes_cards flex justify-around">
-              {
-                Corousel.map((el, id) => (
+              <div className="preview">
+                
+               <img src={el.src[current[el.id] || 0]} alt="" />
+              </div>
 
-                  <div className="shoes_card1" key={id}>
+              <div className="img-hover">
+                {
+                  el.src.map((img , id) => (
+                     <img
+                          src={img}
+                          alt=""
+                          key={id}
+                          onMouseEnter={() => handleMediaChange(el.id, id)}
+                          onMouseLeave={() => handleMediaChange(el.id, 0)}
+                        />
+                  ))
+                }
+                
+              </div>
+            </div>
 
-                    <div className="images ">
-
-                      <div className="preview">
-                        <img src={el.src[index]} alt="" className='h-60' />
-                      </div>
-
-                      <div className="hover_img w-20  ">
-                        <img src={el.src} alt="" className='h-15 cursor-pointer ' onMouseEnter={() => handleClick(id)} onMouseLeave={() => handleClick(0)} />
-                      </div>
-
-                    </div>
-
-                    <div className="details flex flex-col items-center">
-                      <h1 className='text-[24px] text-[#312955]'>{el.h1}</h1>
-                      <p className='text-[#312955]'>{el.p}</p>
-                      <p className='text-[#001f62]'>{el.Rs}</p>
-                    </div>
-                  </div>
-                ))
-              }
-
+            <div className="details">
+              <span>{el.h1}</span>
+              <p>{el.p}</p>
+              <p>{el.Rs}</p>
             </div>
           </div>
-
+          ))
+        }
+         
+        </div>
+        </div>
 
 
           {/* ------------- GEL-KAYANO Section ------------------ */}
