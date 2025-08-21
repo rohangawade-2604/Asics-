@@ -131,7 +131,7 @@ export const Men = () => {
           {/*---------` Mens Shoes Card Section Data...----------------- */}
         <div className="parent_card">
           <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
-        <div className="first_shoes_card flex justify-around">
+        <div className="first_shoes_card flex justify-around my-12 ">
         {
           data.map((el) => (
              <div className="product" key={el.id}>
