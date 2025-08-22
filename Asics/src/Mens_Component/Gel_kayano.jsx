@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
+import './Gel_kayano.css'
 
 const Gel_kayano = () => {
 
@@ -16,7 +17,7 @@ const Gel_kayano = () => {
         }));
     };
 
-    const API = "https://all-project-api-1.onrender.com/Mens_shoes_product"
+    const API = "https://all-project-api-1.onrender.com/Mens_shoes_2"
 
     const fetchData = async () => {
         try {
