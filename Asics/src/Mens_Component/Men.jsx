@@ -167,9 +167,7 @@ export const Men = () => {
           ))
         }
 
-        <h1>hellow orlds
-          d
-        </h1>
+       
          
         </div>
         </div>
