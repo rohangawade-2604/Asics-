@@ -53,23 +53,23 @@ export const Gel_kayano = () => {
     return (
         <>
 
-            <div className="parent_card">
-                <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
-                <div className="first_shoes_card flex flex-col gap-10 px-15 justify-evenly">
+            <div className="parent_card my-15">
+                {/* <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1> */}
+                <div className="first_shoes_card flex flex-col gap-30 px-15 justify-evenly">
                     <Slider {...settings}>
 
                    
                     {
                         state.map((el) => (
-                            <div className="product" key={el.id}>
+                            <div className="product1" key={el.id}>
                                 <div className="images">
 
-                                    <div className="preview">
+                                    <div className="preview1">
 
                                         <img src={el.src[shoes[el.id] || 0]} alt="" />
                                     </div>
 
-                                    <div className="img-hover">
+                                    <div className="img-hover1">
                                         {
                                             el.src.map((img, id) => (
                                                 <img

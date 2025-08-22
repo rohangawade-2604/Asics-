@@ -1,18 +1,21 @@
-.product{
+.product1{
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    height: 480px;
-    width: 320px;
+    height: 460px;
+    width: 380px;
     /* border: 2px solid black; */
-    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1); */
     border-radius: 15px;
     padding: 12px;
     transition: all 0.3s ease-in-out;
+    
 }
 
-.product:hover{
-   background-color: aliceblue;
+.product1:hover{
+   /* background-color: aliceblue; */
+   /* border-left: 1px solid #312955; */
+   box-shadow: -10px -10px 0px 0px aliceblue;
 }
 
 .images{
@@ -31,16 +34,17 @@
     height: 100%;   
     /* border: 2px solid black; */
     border-radius: 10px;
-    /* box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
 
-.img-hover{
-    width: 50%;
+.img-hover1{
+    
+    width: 30%;
     height: 50px;
     display: flex;
     align-items: center;
-    gap: 7px;
+    /* gap: 2px; */
     /* border: 2px solid black; */
     margin-bottom: 10px;
     scale: 0;
@@ -49,22 +53,23 @@
     transition: scale 0.3s, opacity 0.5s;
 }
 
-.product:hover .img-hover{
+.product1:hover .img-hover1{
    scale: 1;
     opacity: 1;
 }
 
-.img-hover img{
-    padding: 2px;
+.img-hover1 img{
+    
+    padding: 7px;
     /* border: 2px solid black; */
-    width: 90px;
+    width: 80px;
     height: 60px;
     object-fit: cover;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
 
-.img-hover img:hover{
+.img-hover1 img:hover{
     transform: scale(1.1);
     /* border: 1px solid black; */
 }
@@ -74,6 +79,6 @@
     transition: all 0.5s;
 }
 
-.product:hover .details{
+.product1:hover .details{
     transform: translateY(0px);
 }
