@@ -2,6 +2,10 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 import './Gel_kayano.css'
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const Gel_kayano = () => {
 
@@ -35,6 +39,15 @@ export const Gel_kayano = () => {
     });
 
 
+      var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4
+  };
+
+
 
 
     return (
@@ -42,7 +55,10 @@ export const Gel_kayano = () => {
 
             <div className="parent_card">
                 <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
-                <div className="first_shoes_card flex justify-around my-12 px-17">
+                <div className="first_shoes_card flex flex-col gap-10 px-15 justify-evenly">
+                    <Slider {...settings}>
+
+                   
                     {
                         state.map((el) => (
                             <div className="product" key={el.id}>
@@ -65,7 +81,7 @@ export const Gel_kayano = () => {
                                                 />
                                             ))
                                         }
-
+                                    
                                     </div>
                                 </div>
 
@@ -77,6 +93,7 @@ export const Gel_kayano = () => {
                             </div>
                         ))
                     }
+                     </Slider>
                 </div>
             </div>
         </>
