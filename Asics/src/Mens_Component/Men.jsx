@@ -21,7 +21,7 @@ export const Men = () => {
 
 
   // This is the function of changing the card image on hover
-   const handleMediaChange = (productId, index) => {
+  const handleMediaChange = (productId, index) => {
     setCurrent((prev) => ({
       ...prev,
       [productId]: index
@@ -31,12 +31,12 @@ export const Men = () => {
   const API = "https://all-project-api-1.onrender.com/Mens_shoes_product"
 
   const fetchData = async () => {
-    try{
+    try {
       const response = await axios.get(API)
       const data = await response.data;
       setData(data)
     }
-    catch(error){
+    catch (error) {
       console.log(error)
     }
   }
@@ -132,48 +132,45 @@ export const Men = () => {
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
 
-        <div className="parent_card">
-          <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
-        <div className="first_shoes_card flex justify-around my-12 px-17">
-        {
-          data.map((el) => (
-             <div className="product" key={el.id}>
-            <div className="images">
+          <div className="parent_card">
+            <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
+            <div className="first_shoes_card flex justify-around my-12 px-17">
+              {
+                data.map((el) => (
+                  <div className="product" key={el.id}>
+                    <div className="images">
 
-              <div className="preview">
-                
-               <img src={el.src[current[el.id] || 0]} alt="" />
-              </div>
+                      <div className="preview">
 
-              <div className="img-hover">
-                {
-                  el.src.map((img , id) => (
-                     <img
-                          src={img}
-                          alt=""
-                          key={id}
-                          onMouseEnter={() => handleMediaChange(el.id, id)}
-                          onMouseLeave={() => handleMediaChange(el.id, 0)}
-                        />
-                  ))
-                }
-                
-              </div>
-            </div>
+                        <img src={el.src[current[el.id] || 0]} alt="" />
+                      </div>
 
-            <div className="details">
-              <span>{el.h1}</span>
-              <p>{el.p}</p>
-              <p>{el.Rs}</p>
+                      <div className="img-hover">
+                        {
+                          el.src.map((img, id) => (
+                            <img
+                              src={img}
+                              alt=""
+                              key={id}
+                              onMouseEnter={() => handleMediaChange(el.id, id)}
+                              onMouseLeave={() => handleMediaChange(el.id, 0)}
+                            />
+                          ))
+                        }
+
+                      </div>
+                    </div>
+
+                    <div className="details">
+                      <span>{el.h1}</span>
+                      <p>{el.p}</p>
+                      <p>{el.Rs}</p>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
           </div>
-          ))
-        }
-
-       
-         
-        </div>
-        </div>
 
 
           {/* ------------- GEL-KAYANO Section ------------------ */}
@@ -182,6 +179,9 @@ export const Men = () => {
             <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ 32</h1>
             <img src={MensGel} alt="" className='cursor-pointer' />
           </div>
+
+
+
 
 
           {/* ------------- Blast Section ------------------ */}
@@ -214,7 +214,7 @@ export const Men = () => {
 
 
 
-        
+
 
         </div>
       </div>
@@ -224,4 +224,3 @@ export const Men = () => {
 }
 
 
-  
