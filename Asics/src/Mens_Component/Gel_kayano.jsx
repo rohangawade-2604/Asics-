@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from "axios"
 import './Gel_kayano.css'
 
-const Gel_kayano = () => {
+export const Gel_kayano = () => {
 
     const [shoes, setShoes] = useState({});
     const [state, setState] = useState([]);
@@ -83,4 +83,4 @@ const Gel_kayano = () => {
     )
 }
 
-export default Gel_kayano
+

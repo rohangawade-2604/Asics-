@@ -13,6 +13,7 @@ import Blast from '../assets/Blast.png'
 import RunCollec from '../assets/RunCollec.png'
 import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
+import { Gel_kayano } from './Gel_kayano'
 
 export const Men = () => {
 
@@ -181,7 +182,9 @@ export const Men = () => {
           </div>
 
 
+          {/* ------------- GEL-KAYANO Component ------------------ */}
 
+          <Gel_kayano />
 
 
           {/* ------------- Blast Section ------------------ */}
