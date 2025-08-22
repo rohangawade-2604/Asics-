@@ -19,6 +19,8 @@ export const Men = () => {
   const [current, setCurrent] = useState({});
   const [data, setData] = useState([]);
 
+
+  // This is the function of changing the card image on hover
    const handleMediaChange = (productId, index) => {
     setCurrent((prev) => ({
       ...prev,
@@ -129,9 +131,10 @@ export const Men = () => {
 
 
           {/*---------` Mens Shoes Card Section Data...----------------- */}
+
         <div className="parent_card">
           <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
-        <div className="first_shoes_card flex justify-around my-12 ">
+        <div className="first_shoes_card flex justify-around my-12 px-17">
         {
           data.map((el) => (
              <div className="product" key={el.id}>
