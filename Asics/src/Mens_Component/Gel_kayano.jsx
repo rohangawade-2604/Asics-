@@ -4,13 +4,13 @@ import axios from "axios"
 
 const Gel_kayano = () => {
 
-    const [current, setCurrent] = useState({});
-    const [data, setData] = useState([]);
+    const [shoes, setShoes] = useState({});
+    const [state, setState] = useState([]);
 
 
     // This is the function of changing the card image on hover
     const handleMediaChange = (productId, index) => {
-        setCurrent((prev) => ({
+        setShoes((prev) => ({
             ...prev,
             [productId]: index
         }));
@@ -22,7 +22,7 @@ const Gel_kayano = () => {
         try {
             const response = await axios.get(API)
             const data = await response.data;
-            setData(data)
+            setState(data)
         }
         catch (error) {
             console.log(error)
@@ -43,13 +43,13 @@ const Gel_kayano = () => {
                 <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
                 <div className="first_shoes_card flex justify-around my-12 px-17">
                     {
-                        data.map((el) => (
+                        state.map((el) => (
                             <div className="product" key={el.id}>
                                 <div className="images">
 
                                     <div className="preview">
 
-                                        <img src={el.src[current[el.id] || 0]} alt="" />
+                                        <img src={el.src[shoes[el.id] || 0]} alt="" />
                                     </div>
 
                                     <div className="img-hover">
