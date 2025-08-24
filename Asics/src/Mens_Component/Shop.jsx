@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
-import './Gel_kayano.css'
+import './Shop.css'
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
