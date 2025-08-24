@@ -14,6 +14,7 @@ import RunCollec from '../assets/RunCollec.png'
 import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
 import { Gel_kayano } from './Gel_kayano'
+import { Shop } from './Shop'
 
 export const Men = () => {
 
@@ -193,6 +194,10 @@ export const Men = () => {
             <h1 className='text-[36px] text-center text-[#312955]'>BLAST Series</h1>
             <img src={Blast} alt="" className='cursor-pointer' />
           </div>
+
+          {/*------------- Shop of the Collections for mens----------------- */}
+
+              <Shop/>
 
           {/* ------------- Running Collections Section ------------------ */}
 
