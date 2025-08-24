@@ -18,7 +18,8 @@ export const Gel_kayano = () => {
         setShoes((prev) => ({
             ...prev,
             [productId]: index
-        }));
+        })
+        );
     };
 
     const API = "https://all-project-api-1.onrender.com/Mens_shoes_2"
@@ -39,13 +40,13 @@ export const Gel_kayano = () => {
     });
 
 
-      var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4
-  };
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    };
 
 
 
@@ -58,42 +59,42 @@ export const Gel_kayano = () => {
                 <div className="first_shoes_card flex flex-col gap-30 px-15 justify-evenly">
                     <Slider {...settings}>
 
-                   
-                    {
-                        state.map((el) => (
-                            <div className="product1" key={el.id}>
-                                <div className="images">
 
-                                    <div className="preview1">
+                        {
+                            state.map((el) => (
+                                <div className="product1" key={el.id}>
+                                    <div className="images">
 
-                                        <img src={el.src[shoes[el.id] || 0]} alt="" />
+                                        <div className="preview1">
+
+                                            <img src={el.src[shoes[el.id] || 0]} alt="" />
+                                        </div>
+
+                                        <div className="img-hover1">
+                                            {
+                                                el.src.map((img, id) => (
+                                                    <img
+                                                        src={img}
+                                                        alt=""
+                                                        key={id}
+                                                        onMouseEnter={() => handleMediaChange(el.id, id)}
+                                                        onMouseLeave={() => handleMediaChange(el.id, 0)}
+                                                    />
+                                                ))
+                                            }
+
+                                        </div>
                                     </div>
 
-                                    <div className="img-hover1">
-                                        {
-                                            el.src.map((img, id) => (
-                                                <img
-                                                    src={img}
-                                                    alt=""
-                                                    key={id}
-                                                    onMouseEnter={() => handleMediaChange(el.id, id)}
-                                                    onMouseLeave={() => handleMediaChange(el.id, 0)}
-                                                />
-                                            ))
-                                        }
-                                    
+                                    <div className="details">
+                                        <span>{el.h1}</span>
+                                        <p>{el.p}</p>
+                                        <p>{el.Rs}</p>
                                     </div>
                                 </div>
-
-                                <div className="details">
-                                    <span>{el.h1}</span>
-                                    <p>{el.p}</p>
-                                    <p>{el.Rs}</p>
-                                </div>
-                            </div>
-                        ))
-                    }
-                     </Slider>
+                            ))
+                        }
+                    </Slider>
                 </div>
             </div>
         </>
