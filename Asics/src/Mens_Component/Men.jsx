@@ -206,6 +206,9 @@ export const Men = () => {
             <h1 className='text-[36px] text-center text-[#312955]'>Running Collections</h1>
             <img src={RunCollec} alt="" className='cursor-pointer' />
           </div>
+          {/*----------------------- Best Sellers-------------------------- */}
+
+          <Sellers/>
 
           {/* ------------- SPORTSTYLE COLLECTION Section ------------------ */}
 
@@ -214,9 +217,6 @@ export const Men = () => {
             <img src={Mensports} alt="" className='cursor-pointer' />
           </div>
 
-          {/*----------------------- Best Sellers-------------------------- */}
-
-          <Sellers/>
 
           {/* ------------- ASICS Clothing Section ------------------ */}
 
