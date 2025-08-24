@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
-import './Shop.css'
+import './Seller.css'
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export const Shop = () => {
+export const Sellers = () => {
 
     const [shoes, setShoes] = useState({});
     const [state, setState] = useState([]);

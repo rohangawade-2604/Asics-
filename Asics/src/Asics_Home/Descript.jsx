@@ -22,7 +22,7 @@ export const Descript = () => {
                     <p>Free shipping on all orders</p>
                   </div>
 
-                <div class="w-px h-12 bg-blue-800 border-1 mx-4"></div>
+                <div className="w-px h-12 bg-blue-800 border-1 mx-4"></div>
 
 
               </div>
@@ -37,7 +37,7 @@ export const Descript = () => {
                     <p>Simply return it within 7 days</p>
                   </div>
 
-                   <div class="w-px h-12 bg-blue-800 border-1 mx-4"></div>
+                   <div className="w-px h-12 bg-blue-800 border-1 mx-4"></div>
 
               </div>
 
@@ -51,7 +51,7 @@ export const Descript = () => {
                     <p>Safe and Secure Payments</p>
                   </div>
 
-                   <div class="w-px h-12 bg-blue-800 border-1 mx-4"></div>
+                   <div className="w-px h-12 bg-blue-800 border-1 mx-4"></div>
 
               </div>
 
@@ -65,7 +65,7 @@ export const Descript = () => {
                     <p>For Order between Rs 5,499 to 14,999</p>
                   </div>
 
-                   <div class="w-px h-12 bg-blue-800 border-1 mx-4"></div>
+                   <div className="w-px h-12 bg-blue-800 border-1 mx-4"></div>
               </div>
 
 

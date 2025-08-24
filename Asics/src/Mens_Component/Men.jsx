@@ -15,6 +15,7 @@ import Mensports from '../assets/Mensport.png'
 import Asclothing from '../assets/Asclothing.png'
 import { Gel_kayano } from './Gel_kayano'
 import { Shop } from './Shop'
+import { Sellers } from './Sellers'
 
 export const Men = () => {
 
@@ -132,7 +133,7 @@ export const Men = () => {
           </div>
 
 
-          {/*---------` Mens Shoes Card Section Data...----------------- */}
+          {/*--------- Mens Shoes Card Section Data...----------------- */}
 
           <div className="parent_card">
             <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
@@ -212,6 +213,10 @@ export const Men = () => {
             <h1 className='text-[36px] text-center text-[#312955]'>SPORTSTYLE COLLECTION</h1>
             <img src={Mensports} alt="" className='cursor-pointer' />
           </div>
+
+          {/*----------------------- Best Sellers-------------------------- */}
+
+          <Sellers/>
 
           {/* ------------- ASICS Clothing Section ------------------ */}
 
