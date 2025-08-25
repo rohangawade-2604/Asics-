@@ -16,6 +16,7 @@ import Asclothing from '../assets/Asclothing.png'
 import { Gel_kayano } from './Gel_kayano'
 import { Shop } from './Shop'
 import { Sellers } from './Sellers'
+import { Popular } from './Popular'
 
 export const Men = () => {
 
@@ -219,14 +220,10 @@ export const Men = () => {
             <img src={Mensports} alt="" className='cursor-pointer' />
           </div>
 
+          <Popular/>
 
-          {/* ------------- ASICS Clothing Section ------------------ */}
 
-          <div className="Running_Collections my-5">
-            <h1 className='text-[36px] text-center text-[#312955]'>ASICS Clothing</h1>
-            <img src={Asclothing} alt="" className='cursor-pointer' />
-          </div>
-
+         
 
 
 
