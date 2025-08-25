@@ -22,7 +22,7 @@ export const Sellers = () => {
         );
     };
 
-    const API = "https://all-project-api-1.onrender.com/Mens_Collections_1"
+    const API = "https://all-project-api-1.onrender.com/Mens_Sellers"
 
     const fetchData = async () => {
         try {
@@ -55,7 +55,7 @@ export const Sellers = () => {
         <>
 
             <div className="parent_card my-10">
-                <h1 className='text-[36px] text-center text-[#312955] my-3'>Shop the Collections</h1>
+                <h1 className='text-[36px] text-center text-[#312955] my-3'>Best Sellers</h1>
                 <div className="first_shoes_card flex flex-col gap-30 px-15  justify-evenly">
                     <Slider {...settings} >
 
@@ -64,7 +64,7 @@ export const Sellers = () => {
                             state.map((el) => (
                                 <div className="product1" key={el.id}>
                                     <div className="images">
-
+                      
                                         <div className="preview1">
 
                                             <img src={el.src[shoes[el.id] || 0]} alt="" />
