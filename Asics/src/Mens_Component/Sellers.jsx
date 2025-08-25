@@ -45,7 +45,10 @@ export const Sellers = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4
+        slidesToScroll: 4,   // better for smooth autoplay
+        autoplay: true,      // enable auto sliding
+        autoplaySpeed: 2000, // time between slides (2 seconds)
+        cssEase: "linear"
     };
 
 
@@ -64,7 +67,7 @@ export const Sellers = () => {
                             state.map((el) => (
                                 <div className="product1" key={el.id}>
                                     <div className="images">
-                      
+
                                         <div className="preview1">
 
                                             <img src={el.src[shoes[el.id] || 0]} alt="" />
