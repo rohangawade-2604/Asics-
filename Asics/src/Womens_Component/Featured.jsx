@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
+import './Featured.css'
 
 export const Featured = () => {
 
@@ -16,7 +17,7 @@ export const Featured = () => {
         }));
     };
 
-    const API = "https://all-project-api-1.onrender.com/Mens_shoes_product"
+    const API = "https://all-project-api-1.onrender.com/Womens_Featured_Product"
 
     const fetchData = async () => {
         try {
@@ -37,7 +38,7 @@ export const Featured = () => {
     return (
         <div>
             <div className="parent_card">
-                <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1>
+                <h1 className='text-[36px] text-center text-[#312955] my-5'>Featured Products</h1>
                 <div className="first_shoes_card flex justify-around my-12 px-35 ">
                     {
                         data.map((el) => (
@@ -66,9 +67,9 @@ export const Featured = () => {
                                 </div>
 
                                 <div className="details">
-                                    <span>{el.h1}</span>
+                                    <span>{el.h1[current[el.id] || 0]}</span>
                                     <p>{el.p}</p>
-                                    <p>{el.Rs}</p>
+                                    <p>{el.Rs[current[el.id] || 0]}</p>
                                 </div>
                             </div>
                         ))

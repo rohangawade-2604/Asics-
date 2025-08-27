@@ -7,6 +7,7 @@ import Liteshow from '../assets/Liteshow.png'
 import Blastw from '../assets/Blastw.png'
 import sportstylew from '../assets/sportstylew.png'
 import Apparelw from '../assets/Apparelw.png'
+import { Featured } from '../Womens_Component/Featured'
 
 export const Women = () => {
   return (
@@ -78,6 +79,10 @@ export const Women = () => {
               <img src={Womengel} alt="" className='cursor-pointer' />
             </div>
 
+
+            {/*-------------- Featured_Products Sections---------------- */}
+
+               <Featured/> 
 
             {/* ------------- LiteShow ection ------------------ */}
 
