@@ -10,6 +10,7 @@ import Apparelw from '../assets/Apparelw.png'
 import { Featured } from '../Womens_Component/Featured'
 import { Lite_Show } from '../Womens_Component/Lite_Show'
 import { Women_Popular } from '../Womens_Component/Women_Popular'
+import { Women_SportStyle } from '../Womens_Component/Women_SportStyle'
 
 
 export const Women = () => {
@@ -114,7 +115,9 @@ export const Women = () => {
               <img src={sportstylew} alt="" className='cursor-pointer' />
             </div>
 
-           
+            {/*-------------- Womens_Sportsyle Most Popular Section---------------- */}
+
+           <Women_SportStyle/>
 
         </div>
       </div>
