@@ -114,12 +114,7 @@ export const Women = () => {
               <img src={sportstylew} alt="" className='cursor-pointer' />
             </div>
 
-            {/* ------------- Apparel collection Women ection ------------------ */}
-
-            <div className="gelkayano">
-              <h1 className='text-[36px] text-center text-[#312955]'>Apparel Collection</h1>
-              <img src={Apparelw} alt="" className='cursor-pointer' />
-            </div>
+           
 
         </div>
       </div>
