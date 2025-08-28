@@ -9,6 +9,7 @@ import sportstylew from '../assets/sportstylew.png'
 import Apparelw from '../assets/Apparelw.png'
 import { Featured } from '../Womens_Component/Featured'
 import { Lite_Show } from '../Womens_Component/Lite_Show'
+import { Women_Popular } from '../Womens_Component/Women_Popular'
 
 
 export const Women = () => {
@@ -98,9 +99,13 @@ export const Women = () => {
             {/* ------------- Blast Women ection ------------------ */}
 
             <div className="gelkayano">
-              <h1 className='text-[36px] text-center text-[#312955]'>LITE-SHOW™ Collection</h1>
+              <h1 className='text-[36px] text-center text-[#312955]'>BLAST™ Collection</h1>
               <img src={Blastw} alt="" className='cursor-pointer' />
             </div>
+
+            {/*-------------- Womens Most Popular---------------- */}
+
+            <Women_Popular/>
 
              {/* ------------- SportStyle Women ection ------------------ */}
 
