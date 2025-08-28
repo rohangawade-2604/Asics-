@@ -21,7 +21,7 @@ export const Women_Popular = () => {
         );
     };
 
-    const API = "https://all-project-api-1.onrender.com/Womens_Gal-kanayo_Product"
+    const API = "https://all-project-api-1.onrender.com/Womens_Most_Popular"
 
     const fetchData = async () => {
         try {
