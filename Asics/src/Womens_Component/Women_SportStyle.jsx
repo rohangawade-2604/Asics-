@@ -54,7 +54,7 @@ export const Women_SportStyle = () => {
   return (
     <>
       <div className="parent_card my-10">
-                {/* <h1 className='text-[36px] text-center text-[#312955] my-3'>Best Sellers</h1> */}
+                 <h1 className='text-[36px] text-center text-[#312955] my-3'>Most Popular</h1> 
                 <div className="first_shoes_card flex flex-col gap-30 px-15  justify-evenly">
                     <Slider {...settings} >
 
