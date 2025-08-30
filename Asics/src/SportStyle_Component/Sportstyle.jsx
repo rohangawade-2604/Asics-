@@ -44,6 +44,8 @@ export const SportStyle = () => {
               <figure>
                 <img src={Edition1} alt=""/>
                 <img src={Edition2} alt=""/>
+                <img src={Edition1} alt=""/>
+                <img src={Edition2} alt=""/>
               </figure>
 
             </div>
