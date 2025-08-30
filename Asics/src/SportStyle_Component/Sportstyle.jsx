@@ -7,6 +7,7 @@ import Coming2 from '../assets/Coming2.png'
 import Collabrations from '../assets/Collabration.png'
 import Edition1 from '../assets/Edition1.png'
 import Edition2 from '../assets/Edition2.png'
+import Apparel_Collect from '../assets/Apparel_Collect.png'
 export const SportStyle = () => {
   return (
     <>
@@ -32,21 +33,30 @@ export const SportStyle = () => {
 
           <div className="collabrations">
             <h1 className='text-[36px] text-center text-[#312955] my-3 font-courier'>Asics Collabrations</h1>
-            <img src={Collabrations} alt="" className='px-25' />
+            <img src={Collabrations} alt="" className='px-25 cursor-pointer' />
           </div>
 
           {/*------------------ Limited Series Edition---------------------------- */}
           <div className="Edition">
             <h1 className='text-[36px] text-center text-[#312955] my-3 font-courier'>Limited Series Edition</h1>
 
-            <div className="image2">
+            <div className="image2 cursor-pointer">
               <figure>
-                <img src={Edition1} alt="" />
-                <img src={Edition2} alt="" />
+                <img src={Edition1} alt=""/>
+                <img src={Edition2} alt=""/>
               </figure>
 
             </div>
           </div>
+
+          {/*---------------- SportStyle Apparel Collection----------------------- */}
+
+          <div className="SportStyle_Apparel my-5">
+            <h1 className='text-[36px] text-center text-[#312955] my-3 font-courier'>SportStyle Apparel Collection</h1>
+            <img src={Apparel_Collect} alt="" className='cursor-pointer' />
+          </div>
+
+          {/*---------------------- Last chance to buy----------------------- */}
 
         </div>
       </div>
