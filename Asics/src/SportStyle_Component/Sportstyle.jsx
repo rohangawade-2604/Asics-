@@ -16,7 +16,7 @@ export const SportStyle = () => {
 
           {/*------------------ Image Container----------------- */}
           <div className="SportStyle_img">
-            <img src={Drop} alt="" />
+            <img src={Drop} alt="" className='cursor-pointer'/>
           </div>
 
           {/*------------------ Launches Container----------------- */}
