@@ -87,7 +87,7 @@ export const Women_Popular = () => {
                                     <div className="details">
                                         <span>{el.h1[shoes[el.id] || 0]}</span>
                                         <p>{el.p}</p>
-                                        <h1>gggg</h1>
+                                        
                                         <p>{el.Rs[shoes[el.id] || 0]}</p>
                                     </div>
                                 </div>
