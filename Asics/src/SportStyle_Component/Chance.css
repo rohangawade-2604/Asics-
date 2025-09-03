@@ -1,0 +1,84 @@
+.product1{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height: 460px;
+    width: 380px;
+    /* border: 2px solid black; */
+    /* box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1); */
+    border-radius: 15px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.product1:hover{
+   /* background-color: aliceblue; */
+   /* border-left: 1px solid #312955; */
+   box-shadow: -10px -10px 0px 0px aliceblue;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preview{
+    height: 270px;
+    width: 100%;
+}
+
+.preview img{
+    width: 100%;
+    height: 100%;   
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.img-hover1{
+    
+    width: 30%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* gap: 2px; */
+    /* border: 2px solid black; */
+    margin-bottom: 10px;
+    scale: 0;
+    opacity: 0;
+    transform-origin: top left;
+    transition: scale 0.3s, opacity 0.5s;
+}
+
+.product1:hover .img-hover1{
+   scale: 1;
+    opacity: 1;
+}
+
+.img-hover1 img{
+    
+    padding: 7px;
+    /* border: 2px solid black; */
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-hover1 img:hover{
+    transform: scale(1.1);
+    /* border: 1px solid black; */
+}
+
+.details{
+    transform: translateY(-30px);
+    transition: all 0.5s;
+}
+
+.product1:hover .details{
+    transform: translateY(0px);
+}

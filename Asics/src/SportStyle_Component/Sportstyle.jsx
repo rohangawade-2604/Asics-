@@ -8,6 +8,8 @@ import Collabrations from '../assets/Collabration.png'
 import Edition1 from '../assets/Edition1.png'
 import Edition2 from '../assets/Edition2.png'
 import Apparel_Collect from '../assets/Apparel_Collect.png'
+import { Chance } from '../SportStyle_Component/Chance'
+
 export const SportStyle = () => {
   return (
     <>
@@ -60,7 +62,7 @@ export const SportStyle = () => {
 
           {/*---------------------- Last chance to buy----------------------- */}
 
-          
+          <Chance/>
 
         </div>
       </div>
