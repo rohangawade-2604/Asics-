@@ -9,6 +9,7 @@ import Edition1 from '../assets/Edition1.png'
 import Edition2 from '../assets/Edition2.png'
 import Apparel_Collect from '../assets/Apparel_Collect.png'
 import { Chance } from '../SportStyle_Component/Chance'
+import {Latest} from '../SportStyle_Component/Latest'
 
 export const SportStyle = () => {
   return (
@@ -18,7 +19,7 @@ export const SportStyle = () => {
 
           {/*------------------ Image Container----------------- */}
           <div className="SportStyle_img">
-            <img src={Drop} alt="" className='cursor-pointer'/>
+            <img src={Drop} alt="" className='cursor-pointer' />
           </div>
 
           {/*------------------ Launches Container----------------- */}
@@ -30,6 +31,23 @@ export const SportStyle = () => {
               <img src={Coming2} alt="" className='w-110' />
             </div>
           </div>
+
+          {/*--------------- Shop by Category-------------------- */}
+
+          <div className="Category text-center">
+            <h1 className='text-[36px] text-center text-[#312955] my-3 font-courier leading-[45px]'>Shop by Category</h1>
+
+            <div className="buttons flex gap-10 justify-around my-5">
+              <button className='border-2 p-2 w-75 rounded-[20px] bg-black text-white font-bold cursor-pointer'>Shop All Men</button>
+              <button className='border-2 p-2 w-75 rounded-[20px] bg-black text-white font-bold cursor-pointer'>Shop All Womens</button>
+            </div>
+          </div>
+
+
+          {/*-------------------------- Latest Drops -------------------*/}
+
+          <Latest/>
+
 
           {/*------------------ Asics collabrations---------------------------- */}
 
@@ -44,10 +62,10 @@ export const SportStyle = () => {
 
             <div className="image2 cursor-pointer">
               <figure>
-                <img src={Edition1} alt=""/>
-                <img src={Edition2} alt=""/>
-                <img src={Edition1} alt=""/>
-                <img src={Edition2} alt=""/>
+                <img src={Edition1} alt="" />
+                <img src={Edition2} alt="" />
+                <img src={Edition1} alt="" />
+                <img src={Edition2} alt="" />
               </figure>
 
             </div>
@@ -62,12 +80,12 @@ export const SportStyle = () => {
 
           {/*---------------------- Last chance to buy----------------------- */}
 
-          <Chance/>
+          <Chance />
 
         </div>
       </div>
     </>
   )
-}  
+}
 
 
