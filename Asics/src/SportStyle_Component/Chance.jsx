@@ -89,8 +89,8 @@ export const Chance = () => {
                                         <span>{el.h1[shoes[el.id] || 0]}</span>
                                         <p>{el.p}</p>
 
-                                        <h1>{el.Amt}</h1>
-                                        <p>{el.Rs[shoes[el.id] || 0] || ""}</p>
+                                        
+                                        <p><s>{el.Amt[shoes[el.id] || 0]}</s>{el.Rs[shoes[el.id] || 0]}</p>
 
 
                                     </div>
