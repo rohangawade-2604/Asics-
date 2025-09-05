@@ -89,8 +89,10 @@ export const Chance = () => {
                                         <span>{el.h1[shoes[el.id] || 0]}</span>
                                         <p>{el.p}</p>
 
-                                        
-                                        <p><s>{el.Amt[shoes[el.id] || 0]}</s>{el.Rs[shoes[el.id] || 0]}</p>
+                                        <div className="amount flex gap-7">
+                                            <s>{el.Amt[shoes[el.id] || 0]}</s>
+                                            <p className='text-red-600'>{el.Rs[shoes[el.id] || 0]}</p>
+                                        </div>
 
 
                                     </div>
