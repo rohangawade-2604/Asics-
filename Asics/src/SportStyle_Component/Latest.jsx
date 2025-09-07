@@ -94,21 +94,33 @@ export const Latest = () => {
 
                     <div className="fifth_part  flex gap-3">
                         <div className="sticky_img w-100 ">
-                            <img src={skyhand} alt="" className='w-80'/>
+                            <img src={skyhand} alt="" className='w-80' />
                         </div>
 
-                        <div className='w-300 flex gap-7 overflow-scroll '>
-                            <div className="wide flex gap-8 w-300">
-                                <img src={skyhand1} alt="" className='w-80 flex flex-row gap-6'/>
-                                <img src={skyland2} alt="" className='w-80 flex flex-row gap-6'/>
-                                <img src={skyland3} alt="" className='w-80 flex flex-row gap-6'/>
-                                <img src={skyland4} alt="" className='w-80 flex flex-row gap-6'/>
-                                <img src={skyland5} alt="" className='w-80 flex flex-row gap-6'/>
-                                <img src={skyland6} alt="" className='w-80 flex flex-row gap-6'/>
-                                <img src={skyland7} alt="" className='w-80 flex flex-row gap-6'/>
+                        <div className="scroll-container overflow-hidden w-300 mx-auto">
+                            <div className="wide flex gap-6 cursor-pointer">
+                                {/* Original set */}
+                                <img src={skyhand1} alt="" className="w-80" />
+                                <img src={skyland2} alt="" className="w-80" />
+                                <img src={skyland3} alt="" className="w-80" />
+                                <img src={skyland4} alt="" className="w-80" />
+                                <img src={skyland5} alt="" className="w-80" />
+                                <img src={skyland6} alt="" className="w-80" />
+                                <img src={skyland7} alt="" className="w-80" />
+
+                                {/* Duplicate set */}
+                                <img src={skyhand1} alt="" className="w-80" />
+                                <img src={skyland2} alt="" className="w-80" />
+                                <img src={skyland3} alt="" className="w-80" />
+                                <img src={skyland4} alt="" className="w-80" />
+                                <img src={skyland5} alt="" className="w-80" />
+                                <img src={skyland6} alt="" className="w-80" />
+                                <img src={skyland7} alt="" className="w-80" />
                             </div>
-                            
                         </div>
+
+
+
                     </div>
 
 

@@ -1,7 +1,16 @@
+.scroll-container {
+  overflow: hidden;
+}
+
 .wide {
   display: flex;
-  gap: 2rem; /* keep your spacing */
-  animation: scrollX 6s linear infinite;
+  gap: 1.5rem;              /* spacing between images */
+  width: max-content;
+  animation: scrollX 20s linear infinite;
+}
+
+.wide:hover{
+     animation-play-state: paused;
 }
 
 @keyframes scrollX {
@@ -9,6 +18,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%); /* adjust based on total width */
+    transform: translateX(-50%); /* one set scrolls away */
   }
 }
