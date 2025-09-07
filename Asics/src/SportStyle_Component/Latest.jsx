@@ -22,6 +22,10 @@ import skyland4 from '../SportStyle_Component/Latest_images/skyland4.png'
 import skyland5 from '../SportStyle_Component/Latest_images/skyland5.png'
 import skyland6 from '../SportStyle_Component/Latest_images/skyland6.png'
 import skyland7 from '../SportStyle_Component/Latest_images/skyland7.png'
+import Green from '../SportStyle_Component/Latest_images/Green.png'
+import Green1 from '../SportStyle_Component/Latest_images/Green1.png'
+import blue from '../SportStyle_Component/Latest_images/blue.png'
+import white from '../SportStyle_Component/Latest_images/white.png'
 
 
 
@@ -118,11 +122,21 @@ export const Latest = () => {
                                 <img src={skyland7} alt="" className="w-80" />
                             </div>
                         </div>
-
-
-
                     </div>
+                    
+                     {/*-------------------- Sixth img sections------------------ */}
 
+                     <div className="fourth_part flex gap-8">
+                        <div className="sticky_img w-80">
+                            <img src={Green} alt="" />
+                        </div>
+
+                        <div className="fleximage w-80 flex gap-7">
+                            <img src={Green1} alt="" />
+                            <img src={blue} alt="" />
+                            <img src={white} alt="" />
+                        </div>
+                    </div>
 
                 </div>
             </div>
