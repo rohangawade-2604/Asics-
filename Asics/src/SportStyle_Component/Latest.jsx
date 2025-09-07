@@ -13,15 +13,27 @@ import Quantum3 from '../SportStyle_Component/Latest_images/Quantum3.png'
 import Gel from '../SportStyle_Component/Latest_images/Gel.png'
 import Gel1 from '../SportStyle_Component/Latest_images/Gel1.png'
 import Gel2 from '../SportStyle_Component/Latest_images/Gel2.png'
+import skyhand from '../SportStyle_Component/Latest_images/skyhand.png'
+import skyhand1 from '../SportStyle_Component/Latest_images/skyhand1.png'
+import skyland2 from '../SportStyle_Component/Latest_images/skyland2.png'
+import skyland3 from '../SportStyle_Component/Latest_images/skyland3.png'
+import skyland4 from '../SportStyle_Component/Latest_images/skyland4.png'
+import skyland5 from '../SportStyle_Component/Latest_images/skyland5.png'
+import skyland6 from '../SportStyle_Component/Latest_images/skyland6.png'
+import skyland7 from '../SportStyle_Component/Latest_images/skyland7.png'
+
+
 
 
 export const Latest = () => {
+
+
     return (
         <>
             <div className="Latest bg-black h-[300vh] text-white px-20">
                 <h1 className='text-[36px] text-center text-white my-3 py-5 font-courier'>Latest Drops</h1>
                 <div className="Latest_Container flex flex-col gap-6">
-                    
+
                     {/*-------------- first img sections --------------- */}
                     <div className="first_part flex gap-8">
                         <div className="sticky_img w-80">
@@ -77,9 +89,26 @@ export const Latest = () => {
                         </div>
                     </div>
 
-                {/*-------------------- fifth img sections------------------ */}
+                    {/*-------------------- fifth img sections------------------ */}
 
-                
+                    <div className="fifth_part flex gap-8">
+                        <div className="sticky_img w-80">
+                            <img src={skyhand} alt="" />
+                        </div>
+
+                        <div className="fleximage w-80 flex gap-7">
+                           
+                                <img src={skyhand1} alt="" />
+                                <img src={skyland2} alt="" />
+                                <img src={skyland3} alt="" />
+                                <img src={skyland4} alt="" />
+                                <img src={skyland5} alt="" />
+                                <img src={skyland6} alt="" />
+                                <img src={skyland7} alt="" />
+                          
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
