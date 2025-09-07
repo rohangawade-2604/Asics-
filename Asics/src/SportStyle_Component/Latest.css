@@ -1,0 +1,14 @@
+.wide {
+  display: flex;
+  gap: 2rem; /* keep your spacing */
+  animation: scrollX 6s linear infinite;
+}
+
+@keyframes scrollX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* adjust based on total width */
+  }
+}
