@@ -1,4 +1,5 @@
 import React from 'react'
+import './Latest.css'
 
 import First from '../SportStyle_Component/Latest_images/First.png'
 import whitey from '../SportStyle_Component/Latest_images/whitey.png'
@@ -96,8 +97,7 @@ export const Latest = () => {
                             <img src={skyhand} alt="" />
                         </div>
 
-                        <div className="fleximage w-80 flex gap-7">
-                           
+                        <div className="flex gap-7 w-80">
                                 <img src={skyhand1} alt="" />
                                 <img src={skyland2} alt="" />
                                 <img src={skyland3} alt="" />
@@ -105,7 +105,6 @@ export const Latest = () => {
                                 <img src={skyland5} alt="" />
                                 <img src={skyland6} alt="" />
                                 <img src={skyland7} alt="" />
-                          
                         </div>
                     </div>
 
