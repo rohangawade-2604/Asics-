@@ -65,7 +65,7 @@ export const Latest = () => {
                         <div className="fleximage w-80 flex gap-7">
                             <img src={kinetic1} alt="" />
                             <img src={kinetic2} alt="" />
-                            <h1>hello</h1>
+                            
                         </div>
                     </div>
 
