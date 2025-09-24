@@ -26,7 +26,7 @@ export const Featured = () => {
             setData(data)
         }
         catch (error) {
-            console.log(error, "code for the day")
+            console.log(error, )
         }
     }
 
