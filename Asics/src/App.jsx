@@ -5,12 +5,13 @@ import { Footer } from './Footer_Compo/Footer'
 import { Navbar } from './Navbar/Navbar'
 import { Men } from './Mens_Component/Men'
 import { Women } from './Home/Women'
-import { Kids } from './Home/Kids'
+// import { Kids } from './Home/Kids'
 import { SportStyle } from './SportStyle_Component/Sportstyle'
 import { Home } from './Asics_Home/Home'
 import { Descript } from './Asics_Home/Descript'
 import {Running_club} from './RunningClub/Running_club'
 import { Bulk_Enquiry } from './Home/Bulk_Enquiry'
+import { Kids } from './Kids_Component/Kids'
 
 function App() {
   
