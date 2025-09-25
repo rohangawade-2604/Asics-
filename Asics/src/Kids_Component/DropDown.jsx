@@ -22,7 +22,7 @@ export const DropDown = ({ title, options, isOpen, onToggle }) => {
                 options.map((options, i) => (
                   
                   <label key={i} >
-                    <input type="checkbox" w-4 h-10/>
+                    <input type="checkbox" w-4 h-10 flex/>
                     {options}
                     
                   </label>
