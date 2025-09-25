@@ -8,7 +8,7 @@ export const Kids = () => {
 
   const handleDropDown = (title) => {
     setOpenDrag( opendrag === title ? null : title)
-    console.log(opendrag)
+    console.log(title)
   }
   return (
     <>
