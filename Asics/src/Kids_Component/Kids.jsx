@@ -1,10 +1,11 @@
 import React from 'react'
+import { DropDown } from './DropDown'
 
 export const Kids = () => {
   return (
-    <div>
-      <h2>hello World</h2> 
-    </div>
+    <>
+      
+    </>
   )
 }
 
