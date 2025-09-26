@@ -18,7 +18,7 @@ export const DropDown = ({ title, Option, isOpen, isToggle }) => {
             <div className='absolute top-13 border-1 w-90 bg-white p-3  gap-3'>
               {
                 Option.map((el, i) => (
-                  <div className='mt-2 '>
+                  <div className='mt-3 '>
                     <label className='flex flex-row gap-3 ' key={i} >
                       <input type="checkbox" className='bg-white' />
                       {el}
@@ -31,14 +31,6 @@ export const DropDown = ({ title, Option, isOpen, isToggle }) => {
           )
         }
       </div>
-
-
-     \
-
-
-
-     
-
 
     </>
   )
