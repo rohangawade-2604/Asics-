@@ -33,7 +33,7 @@ export const DropDown = ({ title, Option, isOpen, isToggle }) => {
       </div>
 
 
-      {/*------- Sorting part with Recommendation filter navbar-------- */}
+     \
 
 
 

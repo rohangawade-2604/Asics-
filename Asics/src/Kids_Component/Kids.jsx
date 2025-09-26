@@ -6,7 +6,7 @@ import { useState } from 'react'
 export const Kids = () => {
 
   const [isOpen, setIsOpen] = useState(null)
- 
+
 
   const handleToggle = (title) => {
     setIsOpen(isOpen === title ? null : title)
@@ -23,7 +23,9 @@ export const Kids = () => {
           <h1 className='text-[16px] text-[#002d69] font-black mt-3'>FILTER</h1>
         </div>
 
+
         <hr className='h-12 border-1 ml-3' />
+
 
         <div className="Dropdown_Container mt-2">
 
@@ -78,13 +80,15 @@ export const Kids = () => {
 
         </div>
 
+
         <hr className='h-12 border-1 ml-3' />
+        
 
         <div className="Sort mt-2">
 
-           <DropDown
+          <DropDown
             title="SORT RECOMMENDED"
-            Option={['NEW ARRIVALS','MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW',  'RECOMMENDED']}
+            Option={['NEW ARRIVALS', 'MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW', 'RECOMMENDED']}
             isOpen={isOpen === "SORT RECOMMENDED"}
             isToggle={() => handleToggle("SORT RECOMMENDED")}
           />
