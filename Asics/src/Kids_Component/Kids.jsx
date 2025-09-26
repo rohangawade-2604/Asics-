@@ -15,26 +15,38 @@ export const Kids = () => {
     <>
       <DropDown
       title="CATEGORY"
-      Option={['Category1','Category2','Category3']}
+      Option={['Shoes']}
       isOpen={isOpen === "CATEGORY"}
       isToggle={() => handleToggle("CATEGORY")}
       /> 
 
       <DropDown
-      title="BRAND"
-      Option={['Brand1','Brand2','Brand3']}
+      title="ACTIVITY"
+      Option={['RUNNING','TENNIS','SPORTSTYLE' , 'INDOOR COURT', 'CRICKET', 'WALKING']}
       isOpen={isOpen === "BRAND"}
       isToggle={() => handleToggle("BRAND")}
       />
 
       <DropDown
-      title="PRICE"
-      Option={['Price1','Price2','Price3']}
-      isOpen={isOpen === "PRICE"}
-      isToggle={() => handleToggle("PRICE")}
+      title="GENDER"
+      Option={['KIDS']}
+      isOpen={isOpen === "GENDER"}
+      isToggle={() => handleToggle("GENDER")}
       />
 
-                                                                                                                                                                                                                                            
+     <DropDown
+      title="PRODUCT TYPE"
+      Option={['SHOES']}
+      isOpen={isOpen === "PRODUCT TYPE"}
+      isToggle={() => handleToggle("PRODUCT TYPE")}
+      /> 
+
+      <DropDown
+      title="PRONATION"
+      Option={['OVERPRONATION', 'NEUTRAL']}
+      isOpen={isOpen === "PRONATION"}
+      isToggle={() => handleToggle("PRONATION")}
+      />                                                                                                                                                                                                                                      
     </>
 
 
