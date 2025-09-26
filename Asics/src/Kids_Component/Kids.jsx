@@ -85,10 +85,10 @@ export const Kids = () => {
         <div className="Sort mt-2">
 
            <DropDown
-            name="SORT RECOMMENDED"
+            title="SORT RECOMMENDED"
             Option={['NEW ARRIVALS','MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW',  'RECOMMENDED']}
             isOpen={isOpen === "SORT RECOMMENDED"}
-            isToggle={() => handleToggle("SORT RECOMMENDED")}
+            isToggle={() => handleSort("SORT RECOMMENDED")}
           />
         </div>
 
