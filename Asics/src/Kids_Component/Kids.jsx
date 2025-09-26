@@ -6,15 +6,13 @@ import { useState } from 'react'
 export const Kids = () => {
 
   const [isOpen, setIsOpen] = useState(null)
-  const [sort , setSort] = useState(null)
+ 
 
   const handleToggle = (title) => {
     setIsOpen(isOpen === title ? null : title)
   }
 
-  const handleSort = (name) => {
-    setSort(sort === name ? null : name)
-  }
+
 
   return (
     <>
@@ -31,7 +29,7 @@ export const Kids = () => {
 
           <DropDown
             title="CATEGORY"
-            Option={['Shoes']}
+            Option={['SHOES']}
             isOpen={isOpen === "CATEGORY"}
             isToggle={() => handleToggle("CATEGORY")}
           />
@@ -88,7 +86,7 @@ export const Kids = () => {
             title="SORT RECOMMENDED"
             Option={['NEW ARRIVALS','MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW',  'RECOMMENDED']}
             isOpen={isOpen === "SORT RECOMMENDED"}
-            isToggle={() => handleSort("SORT RECOMMENDED")}
+            isToggle={() => handleToggle("SORT RECOMMENDED")}
           />
         </div>
 
