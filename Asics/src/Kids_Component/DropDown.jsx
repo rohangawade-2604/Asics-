@@ -5,7 +5,7 @@ export const DropDown = ({ title, Option, isOpen, isToggle }) => {
   return (
     <>
 
-      <div className="Container inline-block border-1 ml-3 p-2 relative">
+      <div className="Container inline-block border-1  border-slate-400 ml-3 p-2 relative">
 
 
         <button className='flex flex-row gap-3 cursor-pointer text-[#002d69] font-bold text-[13px]' onClick={isToggle}>
@@ -15,7 +15,7 @@ export const DropDown = ({ title, Option, isOpen, isToggle }) => {
 
         {
           isOpen && (
-            <div className='absolute top-13 border-1 w-90 bg-white p-3  gap-3'>
+            <div className='absolute top-13 border-1 w-60 bg-white p-3   gap-3'>
               {
                 Option.map((el, i) => (
                   <div className='mt-3 '>

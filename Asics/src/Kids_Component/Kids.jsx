@@ -17,14 +17,14 @@ export const Kids = () => {
   return (
     <>
 
-      <div className="Container flex  border-1 border-l-0 border-r-0 p-2 mx-18">
+      <div className="Container flex  border-1 border-l-0 border-slate-400 border-r-0 p-2 mx-18">
 
         <div className="first_Container">
           <h1 className='text-[16px] text-[#002d69] font-black mt-3'>FILTER</h1>
         </div>
 
 
-        <hr className='h-12 border-1 ml-3' />
+        <hr className='h-12 border-1 ml-3  border-slate-300' />
 
 
         <div className="Dropdown_Container mt-2">
@@ -70,7 +70,7 @@ export const Kids = () => {
             isOpen={isOpen === "SIZE"}
             isToggle={() => handleToggle("SIZE")}
           />
-
+   
           <DropDown
             title="WIDTH"
             Option={['STANDARD']}
@@ -81,8 +81,8 @@ export const Kids = () => {
         </div>
 
 
-        <hr className='h-12 border-1 ml-3' />
-        
+        <hr className='h-12 border-1 ml-3  border-slate-300' />
+
 
         <div className="Sort mt-2">
 
