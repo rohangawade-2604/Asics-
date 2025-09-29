@@ -75,13 +75,19 @@ useEffect(() => {
     );
   });
 
-  // Sorting
-  if (filters.sort === 'PRICE LOW TO HIGH') {
-    result.sort((a, b) => (a.price || a.PRICE) - (b.price || b.PRICE));
-  }
-  if (filters.sort === 'PRICE HIGH TO LOW') {
-    result.sort((a, b) => (b.price || b.PRICE) - (a.price || a.PRICE));
-  }
+
+  const getPrice = (product) => {
+  // Use the first Rs value
+  const priceStr = product.Rs?.[0] || "0"; // "Rs. 17,999"
+  return Number(priceStr.replace(/[^0-9.-]+/g,"")); // Remove "Rs." and ","
+};
+
+   if (filters.sort === 'PRICE LOW TO HIGH') {
+      result.sort((a, b) => getPrice(a) - getPrice(b));
+    }
+    if (filters.sort === 'PRICE HIGH TO LOW') {
+      result.sort((a, b) => getPrice(b) - getPrice(a));
+    }
 
   setFilteredProducts(result);
 }, [filters, products]);
@@ -188,7 +194,7 @@ useEffect(() => {
       <div className="parent_card my-15">
         <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
           {
-            filteredProducts.map((el) => (
+            products && filteredProducts.map((el) => (
               <div className="product1 " key={el.id}>
                 <div className="images">
                   <div className="preview1">
