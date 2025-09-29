@@ -8,57 +8,108 @@ import "./Kids.css"
 
 export const Kids = () => {
 
-  const [isOpen, setIsOpen] = useState(null)
-   const [shoes, setShoes] = useState({});
-    const [state, setState] = useState([]);
+  const [isOpen, setIsOpen] = useState(null);
+  const [shoes, setShoes] = useState({});
+  const [products, setProducts] = useState([]); // All fetched products
+  const [filteredProducts, setFilteredProducts] = useState([]); // Products to be displayed
+  const [filters, setFilters] = useState({  // State for managing active filters
+    category: '',
+    activity: '',
+    gender: '',
+    productType: '',
+    pronation: '',
+    size: '',
+    width: '',
+    sort: '',
+  });
 
+  // This is the function of changing the card image on hover
+  const handleMediaChange = (productId, index) => {
+    setShoes((prev) => ({
+      ...prev,
+      [productId]: index
+    }));
+  };
 
-    // This is the function of changing the card image on hover
-    const handleMediaChange = (productId, index) => {
-        setShoes((prev) => ({
-            ...prev,
-            [productId]: index
-        })
-        );
+  const API = "https://all-project-api-1.onrender.com/mens";
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(API);
+      const data = await response.data;
+      setProducts(data); // Store all fetched data in 'products'
+    }
+    catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []); 
+
+  // Apply filters whenever 'filters' or 'products' state changes
+  // Apply filters whenever 'filters' or 'products' state changes
+useEffect(() => {
+  let result = products.filter(product => {
+    // Normalize product keys (handle uppercase / lowercase mismatch)
+    const prod = {
+      category: product.category || product.CATEGORY,
+      activity: product.activity || product.ACTIVITY,
+      gender: product.gender || product.GENDER,
+      productType: product.productType || product.PRODUCTTYPE,
+      pronation: product.pronation || product.PRONATION,
+      size: product.size || product.SIZE,
+      width: product.width || product.WIDTH,
+      price: product.price || product.PRICE,
     };
 
-    const API = "https://all-project-api-1.onrender.com/mens"
+    return (
+      (!filters.category || prod.category === filters.category) &&
+      (!filters.activity || prod.activity === filters.activity) &&
+      (!filters.gender || prod.gender === filters.gender) &&
+      (!filters.productType || prod.productType === filters.productType) &&
+      (!filters.pronation || prod.pronation === filters.pronation) &&
+      (!filters.size || prod.size === filters.size) &&
+      (!filters.width || prod.width === filters.width)
+    );
+  });
 
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(API)
-            const data = await response.data;
-            setState(data)
-        }
-        catch (error) {
-            console.log(error)
-        }
-    }
+  // Sorting
+  if (filters.sort === 'PRICE LOW TO HIGH') {
+    result.sort((a, b) => (a.price || a.PRICE) - (b.price || b.PRICE));
+  }
+  if (filters.sort === 'PRICE HIGH TO LOW') {
+    result.sort((a, b) => (b.price || b.PRICE) - (a.price || a.PRICE));
+  }
 
-    useEffect(() => {
-        fetchData();
-    });
+  setFilteredProducts(result);
+}, [filters, products]);
 
 
 
   const handleToggle = (title) => {
-    setIsOpen(isOpen === title ? null : title)
-  }
+    setIsOpen(isOpen === title ? null : title);
+  };
 
-
+  // Handler to update the filter state
+  const handleFilterChange = (filterName, value) => {
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      [filterName]: value
+    }));
+    setIsOpen(null); // Close dropdown after selection
+  };
 
   return (
     <>
-
       <div className="Container flex  border-1 border-l-0 border-slate-400 border-r-0 p-2 mx-18">
 
         <div className="first_Container">
           <h1 className='text-[16px] text-[#002d69] font-black mt-3'>FILTER</h1>
         </div>
 
-
         <hr className='h-12 border-1 ml-3  border-slate-300' />
-
 
         <div className="Dropdown_Container mt-2">
 
@@ -67,13 +118,16 @@ export const Kids = () => {
             Option={['SHOES']}
             isOpen={isOpen === "CATEGORY"}
             isToggle={() => handleToggle("CATEGORY")}
+            onSelect={(value) => handleFilterChange('category', value)}
           />
 
           <DropDown
             title="ACTIVITY"
             Option={['RUNNING', 'TENNIS', 'SPORTSTYLE', 'INDOOR COURT', 'CRICKET', 'WALKING']}
-            isOpen={isOpen === "BRAND"}
-            isToggle={() => handleToggle("BRAND")}
+            isOpen={isOpen === "ACTIVITY"}
+            isToggle={() => handleToggle("ACTIVITY")}
+            onSelect={(value) => handleFilterChange('activity', value)}
+            selected={[filters.activity]}  
           />
 
           <DropDown
@@ -81,13 +135,15 @@ export const Kids = () => {
             Option={['KIDS']}
             isOpen={isOpen === "GENDER"}
             isToggle={() => handleToggle("GENDER")}
+            onSelect={(value) => handleFilterChange('gender', value)}
           />
-
+          
           <DropDown
             title="PRODUCT TYPE"
             Option={['SHOES']}
             isOpen={isOpen === "PRODUCT TYPE"}
             isToggle={() => handleToggle("PRODUCT TYPE")}
+            onSelect={(value) => handleFilterChange('productType', value)}
           />
 
           <DropDown
@@ -95,7 +151,7 @@ export const Kids = () => {
             Option={['OVERPRONATION', 'NEUTRAL']}
             isOpen={isOpen === "PRONATION"}
             isToggle={() => handleToggle("PRONATION")}
-            onclick
+            onSelect={(value) => handleFilterChange('pronation', value)}
           />
 
           <DropDown
@@ -103,6 +159,7 @@ export const Kids = () => {
             Option={['US5/UK4', 'US6/UK5', 'US7/UK6', 'US8/UK7', 'US9/UK8', 'US10/UK9']}
             isOpen={isOpen === "SIZE"}
             isToggle={() => handleToggle("SIZE")}
+            onSelect={(value) => handleFilterChange('size', value)}
           />
    
           <DropDown
@@ -110,67 +167,57 @@ export const Kids = () => {
             Option={['STANDARD']}
             isOpen={isOpen === "WIDTH"}
             isToggle={() => handleToggle("WIDTH")}
+            onSelect={(value) => handleFilterChange('width', value)}
           />
 
         </div>
 
-
         <hr className='h-12 border-1 ml-3  border-slate-300' />
 
-
         <div className="Sort mt-2">
-
           <DropDown
             title="SORT RECOMMENDED"
             Option={['NEW ARRIVALS', 'MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW', 'RECOMMENDED']}
             isOpen={isOpen === "SORT RECOMMENDED"}
             isToggle={() => handleToggle("SORT RECOMMENDED")}
+            onSelect={(value) => handleFilterChange('sort', value)}
           />
         </div>
-
       </div>
 
       <div className="parent_card my-15">
-                <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
-                        {
-                            state.map((el) => (
-                                <div className="product1 " key={el.id}>
-                                    <div className="images">
-
-                                        <div className="preview1">
-
-                                            <img src={el.src[shoes[el.id] || 0]} alt="" />
-                                        </div>
-
-                                        <div className="img-hover1">
-                                            {
-                                                el.src.map((img, id) => (
-                                                    <img
-                                                        src={img}
-                                                        alt=""
-                                                        key={id}
-                                                        onMouseEnter={() => handleMediaChange(el.id, id)}
-                                                        onMouseLeave={() => handleMediaChange(el.id, 0)}
-                                                    />
-                                                ))
-                                            }
-
-                                        </div>
-                                    </div>
-
-                                    <div className="details">
-                                        <span>{el.h1[shoes[el.id] || 0]}</span>
-                                        <p>{el.p}</p>
-                                        
-                                        <p>{el.Rs[shoes[el.id] || 0]}</p>
-                                    </div>
-                                </div>
-                            ))
-                        }              </div>
-            </div>
+        <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
+          {
+            filteredProducts.map((el) => (
+              <div className="product1 " key={el.id}>
+                <div className="images">
+                  <div className="preview1">
+                    <img src={el.src[shoes[el.id] || 0]} alt="" />
+                  </div>
+                  <div className="img-hover1">
+                    {
+                      el.src.map((img, id) => (
+                        <img
+                          src={img}
+                          alt=""
+                          key={id}
+                          onMouseEnter={() => handleMediaChange(el.id, id)}
+                          onMouseLeave={() => handleMediaChange(el.id, 0)}
+                        />
+                      ))
+                    }
+                  </div>
+                </div>
+                <div className="details">
+                  <span>{el.h1[shoes[el.id] || 0]}</span>
+                  <p>{el.p}</p>
+                  <p>{el.Rs[shoes[el.id] || 0]}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </>
-
-
-  )
-}
-
+  );
+};
