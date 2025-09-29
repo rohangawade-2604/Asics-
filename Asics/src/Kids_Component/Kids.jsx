@@ -1,11 +1,44 @@
 import React from 'react'
 import { DropDown } from './DropDown'
 import { useState } from 'react'
+import { useEffect } from 'react'
+import axios from "axios"
+import "./Kids.css"
 
 
 export const Kids = () => {
 
   const [isOpen, setIsOpen] = useState(null)
+   const [shoes, setShoes] = useState({});
+    const [state, setState] = useState([]);
+
+
+    // This is the function of changing the card image on hover
+    const handleMediaChange = (productId, index) => {
+        setShoes((prev) => ({
+            ...prev,
+            [productId]: index
+        })
+        );
+    };
+
+    const API = "https://all-project-api-1.onrender.com/mens"
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(API)
+            const data = await response.data;
+            setState(data)
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        fetchData();
+    });
+
 
 
   const handleToggle = (title) => {
@@ -62,6 +95,7 @@ export const Kids = () => {
             Option={['OVERPRONATION', 'NEUTRAL']}
             isOpen={isOpen === "PRONATION"}
             isToggle={() => handleToggle("PRONATION")}
+            onclick
           />
 
           <DropDown
@@ -95,6 +129,45 @@ export const Kids = () => {
         </div>
 
       </div>
+
+      <div className="parent_card my-15">
+                <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
+                        {
+                            state.map((el) => (
+                                <div className="product1 " key={el.id}>
+                                    <div className="images">
+
+                                        <div className="preview1">
+
+                                            <img src={el.src[shoes[el.id] || 0]} alt="" />
+                                        </div>
+
+                                        <div className="img-hover1">
+                                            {
+                                                el.src.map((img, id) => (
+                                                    <img
+                                                        src={img}
+                                                        alt=""
+                                                        key={id}
+                                                        onMouseEnter={() => handleMediaChange(el.id, id)}
+                                                        onMouseLeave={() => handleMediaChange(el.id, 0)}
+                                                    />
+                                                ))
+                                            }
+
+                                        </div>
+                                    </div>
+
+                                    <div className="details">
+                                        <span>{el.h1[shoes[el.id] || 0]}</span>
+                                        <p>{el.p}</p>
+                                        
+                                        <p>{el.Rs[shoes[el.id] || 0]}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }              </div>
+            </div>
     </>
 
 

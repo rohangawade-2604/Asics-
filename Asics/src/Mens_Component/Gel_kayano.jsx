@@ -53,7 +53,6 @@ export const Gel_kayano = () => {
 
     return (
         <>
-
             <div className="parent_card my-15">
                 {/* <h1 className='text-[36px] text-center text-[#312955] my-5'>Most Popular</h1> */}
                 <div className="first_shoes_card flex flex-col gap-30 px-15 justify-evenly">
