@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DropDown = ({ title, Option, isOpen, isToggle , onChange}) => {
+export const DropDown = ({ title, Option, isOpen, isToggle, onSelect, selected = [] }) => {
   return (
     <div className="Container inline-block border-1 border-slate-400 ml-3 p-2 relative">
       <button
@@ -17,10 +17,12 @@ export const DropDown = ({ title, Option, isOpen, isToggle , onChange}) => {
         <div className="absolute top-13 border-1 w-60 bg-white p-3 gap-3">
           {Option.map((el, i) => (
             <div className="mt-3" key={i}>
-              <label className="flex flex-row gap-3" onChange={onChange}>
+              <label className="flex flex-row gap-3">
                 <input
                   type="checkbox"
-                  className="bg-white"        
+                  className="bg-white"
+                  checked={selected.includes(el)}          // controlled state
+                  onChange={() => onSelect(el)}           // ✅ now React is happy
                 />
                 {el}
               </label>
