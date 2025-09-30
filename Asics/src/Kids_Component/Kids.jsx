@@ -11,17 +11,8 @@ export const Kids = () => {
   const [isOpen, setIsOpen] = useState(null);
   const [shoes, setShoes] = useState({});
   const [products, setProducts] = useState([]); // All fetched products
-  const [filteredProducts, setFilteredProducts] = useState([]); // Products to be displayed
-  const [filters, setFilters] = useState({  // State for managing active filters
-    category: '',
-    activity: '',
-    gender: '',
-    productType: '',
-    pronation: '',
-    size: '',
-    width: '',
-    sort: '',
-  });
+ // Products to be displayed
+
 
   // This is the function of changing the card image on hover
   const handleMediaChange = (productId, index) => {
@@ -48,50 +39,6 @@ export const Kids = () => {
     fetchData();
   }, []); 
 
-  // Apply filters whenever 'filters' or 'products' state changes
-  // Apply filters whenever 'filters' or 'products' state changes
-useEffect(() => {
-  let result = products.filter(product => {
-    // Normalize product keys (handle uppercase / lowercase mismatch)
-    const prod = {
-      category: product.category || product.CATEGORY,
-      activity: product.activity || product.ACTIVITY,
-      gender: product.gender || product.GENDER,
-      productType: product.productType || product.PRODUCTTYPE,
-      pronation: product.pronation || product.PRONATION,
-      size: product.size || product.SIZE,
-      width: product.width || product.WIDTH,
-      price: product.price || product.PRICE,
-    };
-
-    return (
-      (!filters.category || prod.category === filters.category) &&
-      (!filters.activity || prod.activity === filters.activity) &&
-      (!filters.gender || prod.gender === filters.gender) &&
-      (!filters.productType || prod.productType === filters.productType) &&
-      (!filters.pronation || prod.pronation === filters.pronation) &&
-      (!filters.size || prod.size === filters.size) &&
-      (!filters.width || prod.width === filters.width)
-    );
-  });
-
-
-  const getPrice = (product) => {
-  // Use the first Rs value
-  const priceStr = product.Rs?.[0] || "0"; // "Rs. 17,999"
-  return Number(priceStr.replace(/[^0-9.-]+/g,"")); // Remove "Rs." and ","
-};
-
-   if (filters.sort === 'PRICE LOW TO HIGH') {
-      result.sort((a, b) => getPrice(a) - getPrice(b));
-    }
-    if (filters.sort === 'PRICE HIGH TO LOW') {
-      result.sort((a, b) => getPrice(b) - getPrice(a));
-    }
-
-  setFilteredProducts(result);
-}, [filters, products]);
-
 
 
   const handleToggle = (title) => {
@@ -99,13 +46,7 @@ useEffect(() => {
   };
 
   // Handler to update the filter state
-  const handleFilterChange = (filterName, value) => {
-    setFilters(prevFilters => ({
-      ...prevFilters,
-      [filterName]: value
-    }));
-    setIsOpen(null); // Close dropdown after selection
-  };
+
 
   return (
     <>
@@ -124,7 +65,7 @@ useEffect(() => {
             Option={['SHOES']}
             isOpen={isOpen === "CATEGORY"}
             isToggle={() => handleToggle("CATEGORY")}
-            onSelect={(value) => handleFilterChange('category', value)}
+         
           />
 
           <DropDown
@@ -132,8 +73,7 @@ useEffect(() => {
             Option={['RUNNING', 'TENNIS', 'SPORTSTYLE', 'INDOOR COURT', 'CRICKET', 'WALKING']}
             isOpen={isOpen === "ACTIVITY"}
             isToggle={() => handleToggle("ACTIVITY")}
-            onSelect={(value) => handleFilterChange('activity', value)}
-            selected={[filters.activity]}  
+          
           />
 
           <DropDown
@@ -141,7 +81,7 @@ useEffect(() => {
             Option={['KIDS']}
             isOpen={isOpen === "GENDER"}
             isToggle={() => handleToggle("GENDER")}
-            onSelect={(value) => handleFilterChange('gender', value)}
+          
           />
           
           <DropDown
@@ -149,7 +89,7 @@ useEffect(() => {
             Option={['SHOES']}
             isOpen={isOpen === "PRODUCT TYPE"}
             isToggle={() => handleToggle("PRODUCT TYPE")}
-            onSelect={(value) => handleFilterChange('productType', value)}
+            
           />
 
           <DropDown
@@ -157,7 +97,7 @@ useEffect(() => {
             Option={['OVERPRONATION', 'NEUTRAL']}
             isOpen={isOpen === "PRONATION"}
             isToggle={() => handleToggle("PRONATION")}
-            onSelect={(value) => handleFilterChange('pronation', value)}
+        
           />
 
           <DropDown
@@ -165,7 +105,7 @@ useEffect(() => {
             Option={['US5/UK4', 'US6/UK5', 'US7/UK6', 'US8/UK7', 'US9/UK8', 'US10/UK9']}
             isOpen={isOpen === "SIZE"}
             isToggle={() => handleToggle("SIZE")}
-            onSelect={(value) => handleFilterChange('size', value)}
+    
           />
    
           <DropDown
@@ -173,7 +113,7 @@ useEffect(() => {
             Option={['STANDARD']}
             isOpen={isOpen === "WIDTH"}
             isToggle={() => handleToggle("WIDTH")}
-            onSelect={(value) => handleFilterChange('width', value)}
+           
           />
 
         </div>
@@ -185,8 +125,7 @@ useEffect(() => {
             title="SORT RECOMMENDED"
             Option={['NEW ARRIVALS', 'MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW', 'RECOMMENDED']}
             isOpen={isOpen === "SORT RECOMMENDED"}
-            isToggle={() => handleToggle("SORT RECOMMENDED")}
-            onSelect={(value) => handleFilterChange('sort', value)}
+            isToggle={() => handleToggle("SORT RECOMMENDED")}  
           />
         </div>
       </div>
@@ -194,7 +133,7 @@ useEffect(() => {
       <div className="parent_card my-15">
         <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
           {
-            products && filteredProducts.map((el) => (
+            products.map((el) => (
               <div className="product1 " key={el.id}>
                 <div className="images">
                   <div className="preview1">
@@ -208,7 +147,7 @@ useEffect(() => {
                           alt=""
                           key={id}
                           onMouseEnter={() => handleMediaChange(el.id, id)}
-                          onMouseLeave={() => handleMediaChange(el.id, 0)}
+                          onMouseLeave={() => handleMediaChange(el.id, 0, )}
                         />
                       ))
                     }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DropDown = ({ title, Option, isOpen, isToggle, onSelect, selected = [] }) => {
+export const DropDown = ({ title, Option, isOpen, isToggle}) => {
   return (
     <div className="Container inline-block border-1 border-slate-400 ml-3 p-2 relative">
       <button
@@ -20,9 +20,7 @@ export const DropDown = ({ title, Option, isOpen, isToggle, onSelect, selected =
               <label className="flex flex-row gap-3">
                 <input
                   type="checkbox"
-                  className="bg-white"
-                  checked={selected.includes(el)}          // controlled state
-                  onChange={() => onSelect(el)}           // ✅ now React is happy
+                  className="bg-white"        
                 />
                 {el}
               </label>
