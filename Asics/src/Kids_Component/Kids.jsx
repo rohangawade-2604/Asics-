@@ -130,6 +130,11 @@ export const Kids = () => {
         </div>
       </div>
 
+      <div className="clear_filters mt-3 border-1 p-2 mx-18 flex flex-row gap-3">
+        <button>Clear filters</button>
+        <button>Clear filters</button>
+      </div>
+
       <div className="parent_card my-15">
         <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
           {
