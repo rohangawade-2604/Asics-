@@ -11,7 +11,7 @@ export const Kids = () => {
   const [isOpen, setIsOpen] = useState(null);
   const [shoes, setShoes] = useState({});
   const [products, setProducts] = useState([]); // All fetched products
- // Products to be displayed
+  const [filteredProducts, setFilteredProducts] = useState([]);  // Products to be displayed
 
 
   // This is the function of changing the card image on hover
@@ -28,7 +28,7 @@ export const Kids = () => {
     try {
       const response = await axios.get(API);
       const data = await response.data;
-      setProducts(data); // Store all fetched data in 'products'
+      setProducts(data);
     }
     catch (error) {
       console.log(error);
@@ -37,15 +37,42 @@ export const Kids = () => {
 
   useEffect(() => {
     fetchData();
-  }, []); 
-
+  }, []);
 
 
   const handleToggle = (title) => {
     setIsOpen(isOpen === title ? null : title);
   };
 
-  // Handler to update the filter state
+  // handling the filter part
+
+  const filterhandler = (e) => {
+    console.log(e.target.value)
+
+    const filtered = products.filter((el) => {
+
+      if(e.target.value === "PRICE LOW TO HIGH") {
+        return el.Rs[0].replace("₹","").replace(",","") - el.Rs[1].replace("₹","").replace(",","") <= 0;
+      }
+      else if(e.target.value === "PRICE HIGH TO LOW") {
+        return el.Rs[0].replace("₹","").replace(",","") - el.Rs[1].replace("₹","").replace(",","") >= 0;
+      }
+      else {
+        return el;
+      }
+    })
+    setFilteredProducts(filtered);
+  }
+
+useEffect(() => {
+  if(products.length) {
+    setFilteredProducts(products);
+  }
+}, [products]);
+
+
+
+
 
 
   return (
@@ -65,7 +92,7 @@ export const Kids = () => {
             Option={['SHOES']}
             isOpen={isOpen === "CATEGORY"}
             isToggle={() => handleToggle("CATEGORY")}
-         
+            
           />
 
           <DropDown
@@ -73,7 +100,7 @@ export const Kids = () => {
             Option={['RUNNING', 'TENNIS', 'SPORTSTYLE', 'INDOOR COURT', 'CRICKET', 'WALKING']}
             isOpen={isOpen === "ACTIVITY"}
             isToggle={() => handleToggle("ACTIVITY")}
-          
+           
           />
 
           <DropDown
@@ -83,13 +110,13 @@ export const Kids = () => {
             isToggle={() => handleToggle("GENDER")}
           
           />
-          
+
           <DropDown
             title="PRODUCT TYPE"
             Option={['SHOES']}
             isOpen={isOpen === "PRODUCT TYPE"}
             isToggle={() => handleToggle("PRODUCT TYPE")}
-            
+
           />
 
           <DropDown
@@ -97,7 +124,7 @@ export const Kids = () => {
             Option={['OVERPRONATION', 'NEUTRAL']}
             isOpen={isOpen === "PRONATION"}
             isToggle={() => handleToggle("PRONATION")}
-        
+            
           />
 
           <DropDown
@@ -105,9 +132,9 @@ export const Kids = () => {
             Option={['US5/UK4', 'US6/UK5', 'US7/UK6', 'US8/UK7', 'US9/UK8', 'US10/UK9']}
             isOpen={isOpen === "SIZE"}
             isToggle={() => handleToggle("SIZE")}
-    
+           
           />
-   
+
           <DropDown
             title="WIDTH"
             Option={['STANDARD']}
@@ -125,7 +152,8 @@ export const Kids = () => {
             title="SORT RECOMMENDED"
             Option={['NEW ARRIVALS', 'MOST POPULAR', 'PRICE LOW TO HIGH', 'PRICE HIGH TO LOW', 'RECOMMENDED']}
             isOpen={isOpen === "SORT RECOMMENDED"}
-            isToggle={() => handleToggle("SORT RECOMMENDED")}  
+            isToggle={() => handleToggle("SORT RECOMMENDED")}
+            onChange={(e) => filterhandler(e)}
           />
         </div>
       </div>
@@ -138,7 +166,7 @@ export const Kids = () => {
       <div className="parent_card my-15">
         <div className="first_shoes_card grid grid-cols-3 ml-25 justify-evenly">
           {
-            products.map((el) => (
+            filteredProducts.map((el) => (
               <div className="product1 " key={el.id}>
                 <div className="images">
                   <div className="preview1">
@@ -152,7 +180,7 @@ export const Kids = () => {
                           alt=""
                           key={id}
                           onMouseEnter={() => handleMediaChange(el.id, id)}
-                          onMouseLeave={() => handleMediaChange(el.id, 0, )}
+                          onMouseLeave={() => handleMediaChange(el.id, 0,)}
                         />
                       ))
                     }
