@@ -1,6 +1,7 @@
 import React from 'react'   
 import { useState, useEffect } from 'react'
-import bulken from '../assets/Bulken.png'
+import Bulken from '../assets/Bulken.png'
+
 import Rupees from '../assets/rupees.png'
 import axios, {Axios} from "axios"
 import Slider from "react-slick";
@@ -48,7 +49,7 @@ export const Bulk_Enquiry = () => {
          <div className="bulk_enquiry_container bg-[#cfcfcf]">
 
             <div className="bulk_img cursor-pointer">
-                <img src={bulken} alt="" />
+                <img src={Bulken} alt="" />
             </div>
 
 
