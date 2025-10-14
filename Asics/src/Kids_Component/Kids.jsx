@@ -130,15 +130,10 @@ export const Kids = () => {
       {/* ---- Filters Section ---- */}
       <div className="Container flex border-1 border-l-0 border-slate-400 border-r-0 p-2 mx-18">
         <div className="first_Container flex items-center gap-4">
-          <h1 className='text-[16px] text-[#002d69] font-black mt-3'>FILTER</h1>
+          <h1 className='text-[16px] text-[#002d69] font-black mt-3 ml-10 mr-8'>FILTER</h1>
           
           {/* Clear Filters Button */}
-          <button 
-            onClick={clearFilters} 
-            className="ml-4 px-3 py-1 text-sm rounded-md bg-red-500 text-white hover:bg-red-600"
-          >
-            Clear Filters
-          </button>
+         
         </div>
         
         <hr className='h-12 border-1 ml-3 border-slate-300' />
@@ -159,6 +154,14 @@ export const Kids = () => {
         <div className="Sort mt-2">
           <DropDown title="SORT RECOMMENDED" Option={['NEW ARRIVALS','MOST POPULAR','PRICE LOW TO HIGH','PRICE HIGH TO LOW','RECOMMENDED']} isOpen={isOpen === "SORT RECOMMENDED"} isToggle={() => handleToggle("SORT RECOMMENDED")} onSelect={(value) => handleFilterChange('sort', value)} />
         </div>
+
+        <hr className='h-12 border-1 ml-5 border-slate-300' />
+         <button 
+            onClick={clearFilters} 
+            className="ml-8 px-8 text-sm rounded-md bg-red-500 text-white hover:bg-red-600"
+          >
+            Clear Filters
+          </button>
       </div>
 
       {/* ---- Selected Filters (Chips) ---- */}
