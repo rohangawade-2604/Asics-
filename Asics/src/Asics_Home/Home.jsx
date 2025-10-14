@@ -3,11 +3,11 @@ import { Shoes_Slider } from './Shoes_Slider'
 import { Explore } from './Explore'
 import { SportCollecton } from './SportCollecton'
 import { ShopColor } from './ShopColor'
-import Gelkayano from '../assets/GelKayano.png'
+import GelKayano from '../assets/GelKayano.png'
 import Dynablast from '../assets/Dynablast.png'
 import Apparel from '../assets/Apparel.png'
 import Aboutasics from '../assets/Aboutasics.mp4'
-import { Descript } from './Descript'
+
 
 export const Home = () => {
     return (
@@ -58,7 +58,7 @@ export const Home = () => {
 
                 <div className="gelkayano">
                     <h1 className='text-[36px] text-center text-[#312955]'>GEL-KAYANO™ Series</h1>
-                    <img src={Gelkayano} alt="" className='cursor-pointer' />
+                    <img src={GelKayano} alt="" className='cursor-pointer' />
                 </div>
 
                 {/* ------------- DYNABLAST Section ------------------ */}
