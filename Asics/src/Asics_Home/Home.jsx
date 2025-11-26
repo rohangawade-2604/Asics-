@@ -3,6 +3,9 @@ import { Shoes_Slider } from './Shoes_Slider'
 import { Explore } from './Explore'
 import { SportCollecton } from './SportCollecton'
 import { ShopColor } from './ShopColor'
+import {Popular} from '../Mens_Component/Popular'
+import {Sellers} from '../Mens_Component/Sellers'
+import { Shop } from '../Mens_Component/Shop'
 import GelKayano from '../assets/GelKayano.png'
 import Dynablast from '../assets/Dynablast.png'
 import Apparel from '../assets/Apparel.png'
@@ -30,6 +33,8 @@ export const Home = () => {
                     />
                 </div>
 
+                <Popular/>
+
                    {/* ------------Shoes_slider Section------------      */}
 
                 <div className='shoes_slider'>
@@ -42,6 +47,7 @@ export const Home = () => {
                     <Explore />
                 </div>
                 
+                <Sellers/>
                 {/* ------------Sport Collection Section------------      */}
 
                 <div className="sport_collection">
@@ -61,12 +67,16 @@ export const Home = () => {
                     <img src={GelKayano} alt="" className='cursor-pointer' />
                 </div>
 
+                <Shop/>
+
                 {/* ------------- DYNABLAST Section ------------------ */}
 
                 <div className="Dynablast">
                     <h1 className='text-[36px] text-center text-[#312955]'>DYNABLAST™ 5 Collection</h1>
                     <img src={Dynablast} alt="" className='cursor-pointer' />
                 </div>
+
+                <Sellers/>
 
                 {/* ------------- Apparel Section ------------------ */}
 
